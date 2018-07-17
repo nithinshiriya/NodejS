@@ -1,0 +1,117 @@
+[
+    {
+        "moduleName" : "Gait",
+            "fields" : [
+                {
+                    "name" : "TestVar",
+                    "datasetName": "CustomGait",
+                    "formula": "{Avg4AvgPressureDistributionLeft} + {Avg4AvgPressureDistributionLeftSD}",
+                    "h5": [
+                        {
+                        "name": "Avg4AvgPressureDistributionLeft",
+                        "index" : 36, 
+                        "datasetName" : "AvgGaitPressureStats",
+                        "recordType": "Gait"
+                        },
+                        {
+                        "name": "Avg4AvgPressureDistributionLeftSD",
+                        "index" : 37, 
+                        "datasetName" : "AvgGaitPressureStats",
+                        "recordType": "Gait"
+                        }
+                    ]     
+                }
+            ]
+        },
+        {
+            "moduleName" : "Concussion",
+                "fields" : [
+                    {
+                        "name" : "PathVelocity",
+                        "datasetName": "CustomConcussion",
+                        "formula": "({ConcussionATEO} + {ConcussionTaEO} + {ConcussionOFEO} + {ConcussionATEC} + {ConcussionTaEC} + {ConcussionOFEC})/6",
+                        "h5": [
+                            {
+                                "name": "ConcussionATEO",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionATEO"
+                            },
+                            {
+                                "name": "ConcussionTaEO",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionTaEO"
+                            },
+                            {
+                                "name": "ConcussionOFEO",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionOFEO"
+                            },
+                            {
+                                "name": "ConcussionATEC",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionATEC"
+                            },
+                            {
+                                "name": "ConcussionTaEC",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionTaEC"
+                            },
+                            {
+                                "name": "ConcussionOFEC",
+                                "index" : 46, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionOFEC"
+                            }
+                        ]     
+                    },
+                    {
+                        "name" : "PathSD",
+                        "datasetName": "CustomConcussion",
+                        "formula": "({ConcussionATEO} + {ConcussionTaEO} + {ConcussionOFEO} + {ConcussionATEC} + {ConcussionTaEC} + {ConcussionOFEC})/6",
+                        "h5": [
+                            {
+                                "name": "ConcussionATEO",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionATEO"
+                            },
+                            {
+                                "name": "ConcussionTaEO",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionTaEO"
+                            },
+                            {
+                                "name": "ConcussionOFEO",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionOFEO"
+                            },
+                            {
+                                "name": "ConcussionATEC",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionATEC"
+                            },
+                            {
+                                "name": "ConcussionTaEC",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionTaEC"
+                            },
+                            {
+                                "name": "ConcussionOFEC",
+                                "index" : 15, 
+                                "datasetName" : "BalanceFinalStats",
+                                "recordType": "ConcussionOFEC"
+                            }
+                        ]     
+                    }
+                ]
+            }
+]

@@ -1,0 +1,64 @@
+{ [Error: Cannot find module '../build/Release/bson'] code: 'MODULE_NOT_FOUND' }
+[33m
+##############################################################
+#
+#   !!! MONGOOSE WARNING !!!
+#
+#   This is an UNSTABLE release of Mongoose.
+#   Unstable releases are available for preview/testing only.
+#   DO NOT run this in production.
+#
+##############################################################
+[0m
+
+
+  Account Factory : User
+    Test Add User
+      √ Should pass when all information provided 
+      √ Should fail on duplicate user (62ms)
+    Test Delete User
+      √ Should pass deleting the user (67ms)
+    Test Update user account permissions
+      √ Should pass deleting the user (54ms)
+      √ Should fail if non array passed in permission (39ms)
+    Test get all user
+[ { _id: 5526859ff29d08e04a0a7ad7,
+    userName: 'user@email.com',
+    firstName: 'First',
+    lastName: 'Last',
+    role: 'rlAdmin',
+    permissions: ["prUserManagement","prProjectSession","prClient","prComparativeStat"],
+    isActive: true },
+  { _id: 5526859ff29d08e04a0a7ae9,
+    userName: 'afUserNew1@email.com',
+    firstName: 'first name',
+    lastName: 'last name',
+    role: 'rlUser',
+    permissions: [],
+    isActive: true },
+  { _id: 5526859ff29d08e04a0a7aeb,
+    userName: 'afUserNewduplicate@email.com',
+    firstName: 'first name',
+    lastName: 'last name',
+    role: 'rlUser',
+    permissions: [],
+    isActive: true },
+  { _id: 5526859ff29d08e04a0a7af0,
+    userName: 'userPermnissions@email.com',
+    firstName: 'first name',
+    lastName: 'last name',
+    role: 'rlUser',
+    permissions: ["prUserManagement"],
+    isActive: true },
+  { _id: 5526859ff29d08e04a0a7af2,
+    userName: 'invalidPermission@email.com',
+    firstName: 'first name',
+    lastName: 'last name',
+    role: 'rlUser',
+    permissions: [],
+    isActive: true } ]
+      √ Should pass get all user 
+
+
+  6 passing (2s)
+

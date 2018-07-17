@@ -1,0 +1,392 @@
+{
+  "key": "BalanceReportTable",
+  "type": "TableSection",
+  "title": "",
+  "height": 0,
+  "jsonKeys": [
+    "BalanceFinalStats"
+  ],
+  "resourceName": "BalanceReportResource",
+  "resourceKeys": [
+    {
+      "name": "Pressure",
+      "items": [
+        {
+          "h5ColumnName": "Duration",
+          "h5Index": [
+            44
+          ],
+          "xName": "COPParameters_Duration",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  
+        },
+        {
+          "h5ColumnName": "PathLength",
+          "h5Index": [
+            45
+          ],
+          "xName": "COPParameters_PathLength",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  
+        },
+        {
+          "h5ColumnName": "COP2APdisMean",
+          "h5Index": [
+            13
+          ],
+          "xName": "COPParameters_MeanCOPToAPAxis",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_MeanCOPToAPAxis"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  
+        },
+        {
+          "h5ColumnName": "COP2MLdisMean",
+          "h5Index": [
+            14
+          ],
+          "xName": "COPParameters_MeanCOPToMLAxis",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_MeanCOPToMLAxis"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  
+        },
+        {
+          "h5ColumnName": "COP2MCOPdisStdDev",
+          "h5Index": [
+            15
+          ],
+          "xName": "COPParameters_SDFromCOPToMeanCOP",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_SDFromCOPToMeanCOP"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },
+        {
+          "h5ColumnName": "COP2APdisStdDev",
+          "h5Index": [
+            16
+          ],
+          "xName": "COPParameters_SDFromCOPToAPAxis",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_SDCOPToAPAxis"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },
+        {
+          "h5ColumnName": "COP2MLdisStdDev",
+          "h5Index": [
+            17
+          ],
+          "xName": "COPParameters_SDFromCOPToMLAxis",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_SDCOPToMLAxis"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0,
+          "normativeSDMin" : 0  
+        },
+        {
+          "h5ColumnName": "Velocity",
+          "h5Index": [
+            46
+          ],
+          "xName": "COPParameters_AverageVelocity",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "CenterOfPressure_AvgVelocity"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        }
+      ]
+    },
+    {
+      "name": "Ellipse",
+      "items": [
+        {
+          "h5ColumnName": "EllipseMajorSemiAxis",
+          "h5Index": [
+            47
+          ],
+          "xName": "ConfidenceEllipse_AnteriorPosteriorvariation",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "ConfidenceEllipse_AnteriorPosteriorVariation"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },
+        {
+          "h5ColumnName": "EllipseMinorSemiAxis",
+          "h5Index": [
+            48
+          ],
+          "xName": "ConfidenceEllipse_MedialLateralVariation",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "ConfidenceEllipse_MedialLateralVariation"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  ,
+          "normativeSDMin" : 0
+        },
+        {
+          "h5ColumnName": "EllipseArea",
+          "h5Index": [
+            50
+          ],
+          "xName": "ConfidenceEllipse_AreaCMCM",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "ConfidenceEllipse_Area"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        }
+      ]
+    },
+    {
+      "name": "BalanceReportAverage",
+      "items": [
+        {
+          "h5ColumnName": "PercentLeftForeMean",
+          "h5Index": [
+            34, 35
+          ],
+          "xName": "WeightBearing_AverageLeftForeRear",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}/{1:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "WeightBearing_AvgLeftFore", "WeightBearing_AvgLeftBack"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },
+        {
+          "h5ColumnName": "PercentRightForeMean",
+          "h5Index": [
+            36, 37
+          ],
+          "xName": "WeightBearing_AverageRightForeRear",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}/{1:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "WeightBearing_AvgRightFore", "WeightBearing_AvgRightForeBack"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },
+        {
+          "h5ColumnName": "WeightBearing_AverageLeftMediallateral",
+          "h5Index": [
+            67, 68
+          ],
+          "xName": "WeightBearing_AverageLeftMediallateral",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}/{1:0.00}",
+          "title": "NULL",
+          "stdColumnNames": ["WeightBearing_AvgLeftMedial"            
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        }, 
+        {
+          "h5ColumnName": "WeightBearing_AverageRightMediallateral",
+          "h5Index": [
+            69, 70
+          ],
+          "xName": "WeightBearing_AverageRightMediallateral",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}/{1:0.00}",
+          "title": "NULL",
+          "stdColumnNames": ["WeightBearing_AvgRightMedial"            
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0 ,
+          "normativeSDMin" : 0 
+        },  
+        {
+          "h5ColumnName": "WeightBearing_AvgSIndex",
+          "h5Index": [
+            75
+          ],
+          "xName": "WeightBearing_AvgSIndex",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": ["WeightBearing_AvgLeftRightMeanSI"           
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0
+        },                       
+        {
+          "h5ColumnName": "PercentLeftMean",
+          "h5Index": [
+            32
+          ],
+          "xName": "WeightBearing_AverageLeft",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "WeightBearing_AvgLeft"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  ,
+          "normativeSDMin" : 0
+        },
+        {
+          "h5ColumnName": "PercentRightMean",
+          "h5Index": [
+            33
+          ],
+          "xName": "WeightBearing_AverageRight",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "stdColumnNames": [
+            "WeightBearing_AvgRight"
+          ],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  ,
+          "normativeSDMin" : 0
+        },
+        {
+          "h5ColumnName": "PercentOtherMean",
+          "h5Index": [
+            57
+          ],
+          "xName": "WeightBearing_Other",
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "Weight Bearing(%) - Other",
+          "stdColumnNames": [],
+          "stdWpfFormat": "{0:0.00}",
+          "formula": "(({0}-{1})/{1})*100",
+          "formulaValueIndex": 0,
+          "formulaWpfFormat": "{0:0.00}%",
+          "normativeValueFieldName": "value",
+          "normativeValueIndex": 0  
+        }
+      ]
+    }
+  ]
+}

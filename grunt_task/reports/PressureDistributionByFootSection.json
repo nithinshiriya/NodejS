@@ -1,0 +1,89 @@
+{
+  "key": "PressureDistributionByFootSection",
+  "type": "AreaLineChartSection",
+  "title": "Gait_Pr_Total_Force_Over_Time",
+  "height": 0,
+  "jsonKeys": [
+    "AvgFootDistributionLeft",
+    "AvgRearDistributionLeft",
+    "AvgForeDistributionLeft",
+    "AvgFootDistributionRight",
+    "AvgRearDistributionRight",
+    "AvgForeDistributionRight",
+    "AvgFootDistributionOther"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Pressure Distribution by Foot Section - LeftDistributionPlot - AvgFootDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgFootDistributionLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - LeftDistributionPlot - AvgRearDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgRearDistributionLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - LeftDistributionPlot - AvgForeDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgForeDistributionLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - LeftDistributionPlot - AvgFootDistributionOther",
+              "index" : -1, 
+              "datasetName" : "AvgFootDistributionOther",
+              "recordType": "Gait"
+            }                                                               
+          ],
+          "title": "Report_Left_Foot",
+          "xAxisTitle" : "Time_MS",
+          "yAxisTitle" : "Force",
+          "legendTitles" : "Total,Rear,Fore,Other",
+          "xAxisFormula" : "{0}*10"
+        },
+        {
+          "h5": [
+            {
+              "name": "Pressure Distribution by Foot Section - RightDistributionPlot - AvgFootDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgFootDistributionRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - RightDistributionPlot - AvgFootDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgRearDistributionRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - RightDistributionPlot - AvgFootDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgForeDistributionRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Pressure Distribution by Foot Section - RightDistributionPlot - AvgFootDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "AvgFootDistributionOther",
+              "recordType": "Gait"
+            }                                                               
+          ],
+          "title": "Report_Right_Foot",
+          "xAxisTitle" : "Time_MS",
+          "yAxisTitle" : "Force",
+          "legendTitles" : "Total,Rear,Fore,Other",
+          "xAxisFormula" : "{0}*10"
+        }
+      ]
+    }
+  ]
+}

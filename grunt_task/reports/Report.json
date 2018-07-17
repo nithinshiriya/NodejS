@@ -1,0 +1,101 @@
+[
+  {
+    "key": "GaitReport",
+    "name": "Gait_Report_Title",
+    "templateClassName" : "FirstPageView",
+    "addOns" : ["sample_walkIn"],
+    "sectionKeys": [
+      "GaitReportTable"
+    ],
+    "pageMapping": [
+      {
+        "page" : 1,
+        "sectionKeys" : ["GaitReportTable", "sample_walkIn"]
+      }
+    ]
+  },
+  {
+  "key": "GaitPressureReportFrame",
+  "name": "Gait_Pr_Title",
+    "templateClassName" : "FirstPageView",
+    "addOns" : [],
+  "sectionKeys": [
+    "GaitPressureTable",
+    "PressureDistributionByFootSection",
+    "CenterOfPressureDistribution",
+    "AverageMaxPressure",
+    "AverageForce",
+    "AverageDistributionAvgAndMax",
+    "PressureDistributionAvgMaxTable"
+  ],
+  "pageMapping": [
+    {
+      "page" : 1,
+      "sectionKeys" : ["AverageDistributionAvgAndMax", "PressureDistributionAvgMaxTable"]
+    },
+    {
+      "page" : 2,
+      "sectionKeys" : ["CenterOfPressureDistribution"]
+    },
+    {
+      "page" : 3,
+      "sectionKeys" : ["GaitPressureTable"]
+    },
+    {
+      "page" : 4,
+      "sectionKeys" : ["PressureDistributionByFootSection"]
+    },
+    {
+      "page" : 5,
+      "sectionKeys" : ["AverageMaxPressure", "AverageForce"]
+    }
+  ]
+},
+  {
+    "key": "BalanceReport",
+    "name": "Balance_Report_Title",
+    "templateClassName" : "FirstPageView",
+    "addOns" : [],
+    "sectionKeys": [
+      "BalanceReportImage",
+      "BalanceReportTable",
+      "BalanceDistributionChart"      
+    ],
+    "pageMapping": [
+      {
+        "page" : 1,
+        "sectionKeys" : ["BalanceReportImage"]
+      }, 
+      {
+        "page" : 2,
+        "sectionKeys" : ["BalanceReportTable"]
+      },
+      {
+        "page" : 3,
+        "sectionKeys" : ["BalanceDistributionChart"]
+      }                  
+    ]
+  },
+  {
+    "key": "ConcussionReport",
+    "name": "Concussion_Report_Title",
+    "templateClassName" : "FirstPageView",
+    "addOns" : [],
+    "sectionKeys": [
+      "ConcussionSummaryReportTable", 
+      "ConcussionReportImageAnklesTogether",
+      "ConcussionReportImageOneFoot",
+      "ConcussionReportImageTandem"
+    ],
+    "pageMapping": [
+      {
+        "page" : 1,
+        "sectionKeys" : ["ConcussionSummaryReportTable", "ConcussionReportImageAnklesTogether"]
+      }, 
+      {
+        "page" : 2,
+        "sectionKeys" : ["ConcussionReportImageOneFoot", "ConcussionReportImageTandem"]
+      }               
+    ]
+  }
+]

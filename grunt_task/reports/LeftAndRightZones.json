@@ -1,0 +1,40 @@
+{
+  "key": "LeftAndRightZones",
+  "type": "ImageSection",
+  "title": "Left and Right Zone",
+  "height": 0,
+  "jsonKeys": [
+    "ImageLeftZones",
+    "ImageRightZones"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Left and Right Zones - ImageLeftZones",
+              "index" : -1, 
+              "datasetName" : "ImageLeftZones",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Left"
+        },
+        {
+          "h5": [
+            {
+              "name": "Left and Right Zones - ImageRightZones",
+              "index" : -1, 
+              "datasetName" : "ImageRightZones",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Right"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "name": "Balance",
+    "ViewName": "TabGeneric",
+    "enumName": "PatricksAwesomeBalanceModule",
+    "automatedTest": false,
+    "deafultViewName" : "GaitReport",
+    "items": [
+        {
+            "name": "Replay",
+            "title": "Replay",
+            "ViewName": "NodeRecordPreview",
+            "type": "GenericPreview",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },
+        {
+            "name": "MetaData",
+            "title": "MetaData",
+            "ViewName": "NodeMetadata",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },                              
+        {
+            "name": "BalanceReport",
+            "title": "BalanceReport",
+            "ViewName": "NodeGenericReportView",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {
+                "viewModelKey" : "GenericReport",
+                "reportKey": "BalanceReport",
+                "showStandardList" : true,
+                "StandardListType" : "Balance"
+            }
+        },
+        {
+            "name": "PressureAnalysis",
+            "title": "PressureAnalysis",
+            "ViewName": "NodePressureAnalysis",
+            "type": "",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },
+        {
+            "name": "Record",
+            "title": "Record",
+            "ViewName": "Record",
+            "type": "GenericRecord",
+            "isTreeViewItem": false,
+            "typeValue": {
+                "record" : {
+                   "types" :[
+                      {
+                        "name" : "Balance",
+                        "desc":  "Balance - Patricks Super Awesome Module",
+                        "type" : "Balance",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": true
+                      }               
+                   ]
+                }        
+              }
+        },
+        {
+            "name": "Footprints",
+            "title": "Footprints",
+            "ViewName": "NodeSampleEditor",
+            "type": "GenericSampleEditor",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        }                               
+    ]
+}

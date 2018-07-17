@@ -1,0 +1,52 @@
+{
+  "key": "CenterOfPressureDistribution",
+  "type": "ImageSection",
+  "title": "Gait_Pr_Center_of_Pressure_Distribution",
+  "height": 475,
+  "jsonKeys": [
+    "ImageCOPDistributionLeft",
+    "ImageCOPDistributionMerged",
+    "ImageCOPDistributionRight"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "COP - ImageCOPDistributionLeft",
+              "index" : -1, 
+              "datasetName" : "ImageCOPDistributionLeft",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Report_Left_Foot"
+        },
+        {
+          "h5": [
+            {
+              "name": "COP - ImageCOPDistributionMerged",
+              "index" : -1, 
+              "datasetName" : "ImageCOPDistributionMerged",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Gait_Pr_COPD_Walking"
+        },
+        {
+          "h5": [
+            {
+              "name": "COP - ImageCOPDistributionRight",
+              "index" : -1, 
+              "datasetName" : "ImageCOPDistributionRight",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Report_Right_Foot"
+        }
+      ]
+    }
+  ]
+}

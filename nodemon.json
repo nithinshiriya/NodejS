@@ -1,0 +1,3 @@
+{
+    "ignore": ["dist/*", "grunt_task/*"]
+}

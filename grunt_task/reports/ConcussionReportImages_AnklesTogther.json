@@ -1,0 +1,37 @@
+{
+  "key": "ConcussionReportImageAnklesTogether",
+  "type": "ImageSection",
+  "title": "ConcussionAnklesTogether",
+  "height": 0,
+  "jsonKeys": ["TrajactoryOfCOP"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "ConcussionATEO",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionATEO"
+            }
+          ],
+          "title": "Eyes Open"    
+        },
+        {
+          "h5": [
+            {
+              "name": "ConcussionATEC",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionATEC"
+            }
+          ],
+          "title": "Eyes Closed"    
+        }
+      ]
+    }
+  ]
+}

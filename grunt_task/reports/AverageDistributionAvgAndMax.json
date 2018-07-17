@@ -1,0 +1,64 @@
+{
+  "key": "AverageDistributionAvgAndMax",
+  "type": "ImageWithColorbar",
+  "title": "Gait_Pr_Pressure_Distribution_Avg_Max",
+  "height": 0,
+  "jsonKeys": [
+    "ImageAvgPressureDistribution",    
+    "ImageAvgColourBar",
+    "ImageMaxPressureDistribution",
+    "ImageMaxColourBar"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Average Distribution Avg and Max - ImageAvgPressureDistribution",
+              "index" : -1, 
+              "datasetName" : "ImageAvgPressureDistribution",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Gait_Pr_Avg_Pressure_Distribution"
+        },
+        {
+          "h5": [
+            {
+              "name": "Average Distribution Avg and Max - ColorBar",
+              "index" : -1, 
+              "datasetName" : "ImageAvgColourBar",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": ""
+        },
+        {
+          "h5": [
+            {
+              "name": "Average Distribution Avg and Max - ImageMaxPressureDistribution",
+              "index" : -1, 
+              "datasetName" : "ImageMaxPressureDistribution",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "Gait_Pr_Max_Pressure_Distribution"
+        },
+        {
+          "h5": [
+            {
+              "name": "Average Distribution Avg and Max - ColorBar",
+              "index" : -1, 
+              "datasetName" : "ImageMaxColourBar",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": ""
+        }                
+      ]
+    }
+  ]
+}

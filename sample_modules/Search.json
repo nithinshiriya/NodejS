@@ -1,0 +1,36 @@
+{
+    "name": "Search",
+    "key": "TabSearch",
+    "enumName": "Search",
+    "automatedTest": false,
+    "items": [
+        {
+            "name": "Home",
+            "key": "NodeHome",
+            "type": "",
+            "isTreeViewItem": false,
+            "typeValue": {}
+        },
+        {
+            "name": "Client",
+            "key": "NodeClient",
+            "type": "",
+            "isTreeViewItem": false,
+            "typeValue": {}
+        },
+        {
+            "name": "Project/Session",
+            "key": "NodeProject_Session",
+            "type": "",
+            "isTreeViewItem": false,
+            "typeValue": {}
+        },
+        {
+            "name": "Sample",
+            "key": "NodeSample",
+            "type": "",
+            "isTreeViewItem": false,
+            "typeValue": {}
+        }
+    ]
+}

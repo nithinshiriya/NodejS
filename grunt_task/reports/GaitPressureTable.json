@@ -1,0 +1,837 @@
+{
+  "key": "GaitPressureTable",
+  "type": "TableSection",
+  "title": "Stepscan Pressure Report",
+  "height": 0,
+  "jsonKeys": [
+    "AvgGaitPressureStats", "GlobalStats"
+  ],
+  "resourceKeys": [
+    {
+      "resourceName": "GaitPressure\\GaitPressureDistributionTable.xaml",
+      "items": [
+        {
+          "xName": "FootCnt",
+          "h5": [
+            {
+              "name": "FootCnt",
+              "index" : 0, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }                    
+          ],           
+          "formula": "",    
+          "displayFormat": "{FootCnt:0.00}"       
+        },          
+        {
+          "xName": "GaitPressureDist_Foot_SIndex",
+          "h5": [
+            {
+              "name": "PressurebyFootSymmetryIndex",
+              "index" : 70, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                    
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyFootSymmetryIndex:0.00}",
+          "normative" : {
+            "fields" : ["Avg4AvgLeftRightSI"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{Avg4AvgLeftRightSI.value:0.00}",
+            "lowerLimitFormula" : "{Avg4AvgLeftRightSI.value} - ({Avg4AvgLeftRightSI.SDValue} * 2)",
+            "upperLimitFormula" : "{Avg4AvgLeftRightSI.value} + ({Avg4AvgLeftRightSI.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },               
+          "rangeInBetween" : "PressurebyFootSymmetryIndex",                          
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "PressurebyFootSymmetryIndex",
+            "normativeFieldName": "Avg4AvgLeftRightSI.value"              
+          }
+        },
+        {
+          "xName": "GaitPressureDist_Foot_Left",
+          "h5": [
+            {
+              "name": "PressurebyFootLeft",
+              "index" : 73, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                    
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyFootLeft:0.00}", 
+          "normative" : {
+            "fields" : ["AvgPercentLeft"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentLeft.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentLeft.value} - ({AvgPercentLeft.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentLeft.value} + ({AvgPercentLeft.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },               
+          "rangeInBetween" : "PressurebyFootLeft",                          
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "PressurebyFootLeft",
+            "normativeFieldName": "AvgPercentLeft.value"              
+          }                      
+        },
+        {
+          "xName": "GaitPressureDist_Foot_Right",
+          "h5": [
+            {
+              "name": "PressurebyFootRight",
+              "index" : 74, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                    
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyFootRight:0.00}",
+          "normative" : {
+            "fields" : ["AvgPercentRight"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentRight.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentRight.value} - ({AvgPercentRight.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentRight.value} + ({AvgPercentRight.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },               
+          "rangeInBetween" : "PressurebyFootRight",                          
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "PressurebyFootRight",
+            "normativeFieldName": "AvgPercentRight.value"              
+          }                     
+        },
+        {
+          "xName": "GaitPressureDist_Foot_Other",
+          "h5": [
+            {
+              "name": "PressurebyFootOther",
+              "index" : 75, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                    
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyFootOther:0.00}",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "PressurebyFootOther",
+            "normativeFieldName": ""              
+          }                     
+        },        
+        {
+          "xName": "GaitPressureDist_ForeRear_Left",
+          "h5": [
+            {
+              "name": "PressurebyLeftFore",
+              "index" : 64, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PressurebyLeftRear",
+              "index" : 62, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyLeftFore:0.00} / {PressurebyLeftRear:0.00}",   
+          "normative" : {
+            "fields" : ["AvgPercentFore_Left"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentFore_Left.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentFore_Left.value} - ({AvgPercentFore_Left.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentFore_Left.value} + ({AvgPercentFore_Left.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "PressurebyLeftFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "PressurebyLeftFore",
+          "normativeFieldName": "AvgPercentFore_Left.value"              
+          }                          
+        },{
+          "xName": "GaitPressureDist_ForeRear_Right",
+          "h5": [
+            {
+              "name": "PressurebyRightFore",
+              "index" : 68, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PressurebyRightRear",
+              "index" : 66, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyRightFore:0.00} / {PressurebyRightRear:0.00}", 
+          "normative" : {
+            "fields" : ["AvgPercentFore_Right"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentFore_Right.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentFore_Right.value} - ({AvgPercentFore_Right.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentFore_Right.value} + ({AvgPercentFore_Right.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "PressurebyRightFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "PressurebyRightFore",
+          "normativeFieldName": "AvgPercentFore_Right.value"              
+          }  
+        },
+        {
+          "xName": "GaitPressureDist_MedialLateral_Left",
+          "h5": [
+            {
+              "name": "PressurebyMedialLateralLeft",
+              "index" : 56, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PressurebyMedialLateralLeftSD",
+              "index" : 54, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyMedialLateralLeft:0.00} ± {PressurebyMedialLateralLeftSD:0.00}",
+          "normative" : {
+            "fields" : ["AvgPercentMedial_Left"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentMedial_Left.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentMedial_Left.value} - ({AvgPercentMedial_Left.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentMedial_Left.value} + ({AvgPercentMedial_Left.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "PressurebyMedialLateralLeft",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "PressurebyMedialLateralLeft",
+          "normativeFieldName": "AvgPercentMedial_Left.value"              
+          }   
+        },
+        {
+          "xName": "GaitPressureDist_MedialLateral_Right",
+          "h5": [
+            {
+              "name": "PressurebyMedialLateralRight",
+              "index" : 60, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PressurebyMedialLateralRightSD",
+              "index" : 58, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{PressurebyMedialLateralRight:0.00} ± {PressurebyMedialLateralRightSD:0.00}", 
+          "normative" : {
+            "fields" : ["AvgPercentMedial_Right"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgPercentMedial_Right.value:0.00}",
+            "lowerLimitFormula" : "{AvgPercentMedial_Right.value} - ({AvgPercentMedial_Right.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgPercentMedial_Right.value} + ({AvgPercentMedial_Right.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "PressurebyMedialLateralRight",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "PressurebyMedialLateralRight",
+          "normativeFieldName": "AvgPercentMedial_Right.value"              
+          }                      
+        }
+      ]
+    },        
+    {
+      "resourceName": "GaitPressure\\GaitPressureFrame.xaml",
+      "items": [             
+        {
+          "xName": "AvgPercentContactTimeLeftFore",
+          "h5": [
+            {
+              "name": "AvgPercentContactTimeLeftFore",
+              "index" : 12, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentContactTimeLeftForeSD",
+              "index" : 24, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentContactTimeLeftFore:0.00} ± {AvgPercentContactTimeLeftForeSD:0.00}",
+          "normative" : {
+            "fields" : ["ContactTime_Left_Fore"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Left_Fore.value:0.00} ± {ContactTime_Left_Fore.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Left_Fore.value} - ({ContactTime_Left_Fore.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Left_Fore.value} + ({ContactTime_Left_Fore.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentContactTimeLeftFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentContactTimeLeftFore",
+          "normativeFieldName": "ContactTime_Left_Fore.value"              
+        }                            
+        },
+        {
+          "xName": "AvgPercentContactTimeLeftRear",
+          "h5": [
+            {
+              "name": "AvgPercentContactTimeLeftRear",
+              "index" : 12, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentContactTimeLefRearSD",
+              "index" : 24, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentContactTimeLeftRear:0.00} ± {AvgPercentContactTimeLefRearSD:0.00}", 
+          "normative" : {
+            "fields" : ["ContactTime_Left_Rear"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Left_Rear.value:0.00} ± {ContactTime_Left_Rear.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Left_Rear.value} - ({ContactTime_Left_Rear.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Left_Rear.value} + ({ContactTime_Left_Rear.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentContactTimeLeftRear",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentContactTimeLeftRear",
+          "normativeFieldName": "ContactTime_Left_Rear.value"              
+          }                           
+        },
+        {
+          "xName": "AvgPercentTimeChangeRearForeLeft",
+          "h5": [
+            {
+              "name": "AvgPercentTimeChangeRearForeLeft",
+              "index" : 17, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentTimeChangeRearForeLeftSD",
+              "index" : 29, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentTimeChangeRearForeLeft:0.00} ± {AvgPercentTimeChangeRearForeLeftSD:0.00}", 
+          "normative" : {
+            "fields" : ["ContactTime_Left_Full"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Left_Full.value:0.00} ± {ContactTime_Left_Full.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Left_Full.value} - ({ContactTime_Left_Full.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Left_Full.value} + ({ContactTime_Left_Full.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentTimeChangeRearForeLeft",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentTimeChangeRearForeLeft",
+          "normativeFieldName": "ContactTime_Left_Full.value"              
+          }                            
+        },
+        {
+          "xName": "AvgPercentContactTimeRightFore",
+          "h5": [
+            {
+              "name": "AvgPercentContactTimeRightFore",
+              "index" : 18, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentContactTimeRightForeSD",
+              "index" : 30, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentContactTimeRightFore:0.00} ± {AvgPercentContactTimeRightForeSD:0.00}", 
+          "normative" : {
+            "fields" : ["ContactTime_Right_Fore"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Right_Fore.value:0.00} ± {ContactTime_Right_Fore.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Right_Fore.value} - ({ContactTime_Right_Fore.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Right_Fore.value} + ({ContactTime_Right_Fore.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentContactTimeRightFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentContactTimeRightFore",
+          "normativeFieldName": "ContactTime_Right_Fore.value"              
+          }                         
+        },
+        {
+          "xName": "AvgPercentContactTimeRightRear",
+          "h5": [
+            {
+              "name": "AvgPercentContactTimeRightRear",
+              "index" : 19, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentContactTimeRightRearSD",
+              "index" : 31, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentContactTimeRightRear:0.00} ± {AvgPercentContactTimeRightRearSD:0.00}",
+          "normative" : {
+            "fields" : ["ContactTime_Right_Rear"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Right_Rear.value:0.00} ± {ContactTime_Right_Rear.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Right_Rear.value} - ({ContactTime_Right_Rear.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Right_Rear.value} + ({ContactTime_Right_Rear.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentContactTimeRightFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentContactTimeRightRear",
+          "normativeFieldName": "ContactTime_Right_Rear.value"              
+          }                             
+        },
+        {
+          "xName": "AvgPercentTimeChangeRearForeRight",
+          "h5": [
+            {
+              "name": "AvgPercentTimeChangeRearForeRight",
+              "index" : 23, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentTimeChangeRearForeRightSD",
+              "index" : 35, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                 
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentTimeChangeRearForeRight:0.00} ± {AvgPercentTimeChangeRearForeRightSD:0.00}", 
+          "normative" : {
+            "fields" : ["ContactTime_Right_Full"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{ContactTime_Right_Full.value:0.00} ± {ContactTime_Right_Full.SDValue:0.00}",
+            "lowerLimitFormula" : "{ContactTime_Right_Full.value} - ({ContactTime_Right_Full.SDValue} * 2)",
+            "upperLimitFormula" : "{ContactTime_Right_Full.value} + ({ContactTime_Right_Full.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentTimeChangeRearForeRight",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentTimeChangeRearForeRight",
+          "normativeFieldName": "ContactTime_Right_Full.value"              
+          }                         
+        },
+        {
+          "xName": "AvgContactAreaSIndex",
+          "h5": [
+            {
+              "name": "AreaSymmetryIndex",
+              "index" : 72, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                               
+          ],           
+          "formula": "",    
+          "displayFormat": "{AreaSymmetryIndex:0.00}",  
+          "normative" : {
+            "fields" : ["AvgLeftRightAreaSI"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgLeftRightAreaSI.value:0.00}",
+            "lowerLimitFormula" : "{AvgLeftRightAreaSI.value} - ({AvgLeftRightAreaSI.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgLeftRightAreaSI.value} + ({AvgLeftRightAreaSI.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AreaSymmetryIndex",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AreaSymmetryIndex",
+          "normativeFieldName": "AvgLeftRightAreaSI.value"              
+          }                   
+        },        
+        {
+          "xName": "AvgContactAreaLeft",
+          "h5": [
+            {
+              "name": "AvgContactAreaLeft",
+              "index" : 1, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactAreaLeftSD",
+              "index" : 7, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactAreaLeft:0.00} ± {AvgContactAreaLeftSD:0.00}",           
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgContactAreaLeft",
+          "normativeFieldName": ""              
+          }                                    
+        },
+        {
+          "xName": "AvgContactAreaRight",
+          "h5": [
+            {
+              "name": "AvgContactAreaRight",
+              "index" : 4, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactAreaRightSD",
+              "index" : 10, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactAreaRight:0.00} ± {AvgContactAreaRightSD:0.00}", 
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "AvgContactAreaRight",
+            "normativeFieldName": ""              
+            }                        
+        },
+        {
+          "xName": "AvgContactAreaOther",
+          "h5": [
+            {
+              "name": "AvgContactAreaOther",
+              "index" : 45, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactAreaOtherSD",
+              "index" : 48, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactAreaOther:0.00} ± {AvgContactAreaOtherSD:0.00}",    
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "AvgContactAreaOther",
+            "normativeFieldName": ""              
+            }           
+        },
+        {
+          "xName": "AvgContactTimeLeft",
+          "h5": [
+            {
+              "name": "AvgContactTimeLeft",
+              "index" : 0, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactTimeLeftSD",
+              "index" : 6, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactTimeLeft:0.00} ± {AvgContactTimeLeftSD:0.00}",   
+          "normative" : {
+            "fields" : ["AvgContactTime_Time_Left"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgContactTime_Time_Left.value:0.00} ± {AvgContactTime_Time_Left.SDValue:0.00}",
+            "lowerLimitFormula" : "{AvgContactTime_Time_Left.value} - ({AvgContactTime_Time_Left.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgContactTime_Time_Left.value} + ({AvgContactTime_Time_Left.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgContactTimeLeft",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgContactTimeLeft",
+          "normativeFieldName": "AvgContactTime_Time_Left.value"              
+          }                               
+        },
+        {
+          "xName": "AvgContactTimeRight",
+          "h5": [
+            {
+              "name": "AvgContactTimeRight",
+              "index" : 3, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactTimeRightSD",
+              "index" : 9, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactTimeRight:0.00} ± {AvgContactTimeRightSD:0.00}",    
+          "normative" : {
+            "fields" : ["AvgContactTime_Time_Right"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{AvgContactTime_Time_Right.value:0.00} ± {AvgContactTime_Time_Right.SDValue:0.00}",
+            "lowerLimitFormula" : "{AvgContactTime_Time_Right.value} - ({AvgContactTime_Time_Right.SDValue} * 2)",
+            "upperLimitFormula" : "{AvgContactTime_Time_Right.value} + ({AvgContactTime_Time_Right.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgContactTimeLeft",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgContactTimeRight",
+          "normativeFieldName": "AvgContactTime_Time_Right.value"              
+          }                        
+        },
+        {
+          "xName": "AvgContactTimeOther",
+          "h5": [
+            {
+              "name": "AvgContactTimeOther",
+              "index" : 44, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgContactTimeOtherSD",
+              "index" : 47, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgContactTimeOther:0.00} ± {AvgContactTimeOtherSD:0.00}",         
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgContactTimeOther",
+          "normativeFieldName": ""              
+          }                  
+        },
+        {
+          "xName": "AvgPercentHigherForceTimeLeftForeRear",
+          "h5": [
+            {
+              "name": "AvgPercentHigherForceTimeLeftFore",
+              "index" : 14, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentHigherForceTimeLeftRear",
+              "index" : 15, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentHigherForceTimeLeftFore:0.00} / {AvgPercentHigherForceTimeLeftRear:0.00}",           
+          "normative" : {
+            "fields" : ["PercentageHigherForce_Forefoot_Left"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{PercentageHigherForce_Forefoot_Left.value:0.00} ± {PercentageHigherForce_Forefoot_Left.SDValue:0.00}",
+            "lowerLimitFormula" : "{PercentageHigherForce_Forefoot_Left.value} - ({PercentageHigherForce_Forefoot_Left.SDValue} * 2)",
+            "upperLimitFormula" : "{PercentageHigherForce_Forefoot_Left.value} + ({PercentageHigherForce_Forefoot_Left.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentHigherForceTimeLeftFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentHigherForceTimeLeftFore",
+          "normativeFieldName": "PercentageHigherForce_Forefoot_Left.value"              
+          }                
+        },
+        {
+          "xName": "AvgPercentHigherForceTimeRightForeRear",
+          "h5": [
+            {
+              "name": "AvgPercentHigherForceTimeRightFore",
+              "index" : 20, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "AvgPercentHigherForceTimeRightRear",
+              "index" : 21, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgPercentHigherForceTimeRightFore:0.00} / {AvgPercentHigherForceTimeRightRear:0.00}", 
+          "normative" : {
+            "fields" : ["PercentageHigherForce_Forefoot_Right"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{PercentageHigherForce_Forefoot_Right.value:0.00} ± {PercentageHigherForce_Forefoot_Right.SDValue:0.00}",
+            "lowerLimitFormula" : "{PercentageHigherForce_Forefoot_Right.value} - ({PercentageHigherForce_Forefoot_Right.SDValue} * 2)",
+            "upperLimitFormula" : "{PercentageHigherForce_Forefoot_Right.value} + ({PercentageHigherForce_Forefoot_Right.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentHigherForceTimeRightFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgPercentHigherForceTimeRightFore",
+          "normativeFieldName": "PercentageHigherForce_Forefoot_Right.value"              
+          }                           
+        },        
+        {
+          "xName": "AvgTimeChangeRearForeLeft",
+          "h5": [
+            {
+              "name": "AvgTimeChangeRearForeLeft",
+              "index" : 16, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgTimeChangeRearForeLeft:0.00}",                 
+          "title": "Time Change Rearfoot To Forefoot - Second/Left",
+          "normative" : {
+            "fields" : ["TimeChangeRearToFore_Seconds_Left"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{TimeChangeRearToFore_Seconds_Left.value:0.00} ± {TimeChangeRearToFore_Seconds_Left.SDValue:0.00}",
+            "lowerLimitFormula" : "{TimeChangeRearToFore_Seconds_Left.value} - ({TimeChangeRearToFore_Seconds_Left.SDValue} * 2)",
+            "upperLimitFormula" : "{TimeChangeRearToFore_Seconds_Left.value} + ({TimeChangeRearToFore_Seconds_Left.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgPercentHigherForceTimeRightFore",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgTimeChangeRearForeLeft",
+          "normativeFieldName": "TimeChangeRearToFore_Seconds_Left.value"              
+          }                   
+        },
+        {
+          "xName": "AvgTimeChangeRearForeRight",
+          "h5": [
+            {
+              "name": "AvgTimeChangeRearForeRight",
+              "index" : 22, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }                                  
+          ],           
+          "formula": "",    
+          "displayFormat": "{AvgTimeChangeRearForeRight:0.00}",          
+          "normative" : {
+            "fields" : ["TimeChangeRearToFore_Seconds_Right"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{TimeChangeRearToFore_Seconds_Right.value:0.00} ± {TimeChangeRearToFore_Seconds_Right.SDValue:0.00}",
+            "lowerLimitFormula" : "{TimeChangeRearToFore_Seconds_Right.value} - ({TimeChangeRearToFore_Seconds_Right.SDValue} * 2)",
+            "upperLimitFormula" : "{TimeChangeRearToFore_Seconds_Right.value} + ({TimeChangeRearToFore_Seconds_Right.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+        },          
+        "rangeInBetween" : "AvgTimeChangeRearForeRight",          
+        "difference" : {
+          "formula" : "(({0}-{1})/{1})*100",
+          "displayFormat": "{0:0.00}%",
+          "h5FieldName" : "AvgTimeChangeRearForeRight",
+          "normativeFieldName": "TimeChangeRearToFore_Seconds_Right.value"              
+          }                 
+        }
+      ]
+    }
+  ]
+}

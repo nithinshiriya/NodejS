@@ -1,0 +1,65 @@
+
+///===========================================///
+Balance calibration report table settings
+{
+      "name": "BalanceReportCalibration",
+      "items": [
+        {
+          "h5ColumnName": "COPxTotalMean",
+          "h5Index": [
+            4
+          ],
+          "row": 0,
+          "column": 2,
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "standardColumnName": "NULL",
+          "formula": "({0}-{1})/100",
+          "formulaWpfFormat": "{0:0.00}%"
+        },
+        {
+          "h5ColumnName": "COPyTotalMean",
+          "h5Index": [
+            5
+          ],
+          "row": 1,
+          "column": 2,
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "standardColumnName": "NULL",
+          "formula": "({0}-{1})/100",
+          "formulaWpfFormat": "{0:0.00}%"
+        },
+        {
+          "h5ColumnName": "COPxTotalStdDev",
+          "h5Index": [
+            10
+          ],
+          "row": 2,
+          "column": 2,
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "standardColumnName": "NULL",
+          "formula": "({0}-{1})/100",
+          "formulaWpfFormat": "{0:0.00}%"
+        },
+        {
+          "h5ColumnName": "COPyTotalStdDev",
+          "h5Index": [
+            11
+          ],
+          "row": 3,
+          "column": 2,
+          "datasetName": "BalanceFinalStats",
+          "wpfFormat": "{0:0.00}",
+          "title": "NULL",
+          "standardColumnName": "NULL",
+          "formula": "({0}-{1})/100",
+          "formulaWpfFormat": "{0:0.00}%"
+        }
+      ]
+    }
+///===========================================///

@@ -1,0 +1,46 @@
+{
+  "key": "AverageMaxPressure",
+  "type": "AreaLineChartSection",
+  "title": "Gait_Pr_Max_Pressure_Over_Time",
+  "height": 50,
+  "jsonKeys": [
+    "AvgMaxPressureDistributionLeft",
+    "AvgMaxPressureDistributionRight",
+    "AvgMaxPressureDistributionOther"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Average Max Pressure - LeftAverageMaxPressure",
+              "index" : -1, 
+              "datasetName" : "AvgMaxPressureDistributionLeft",
+              "recordType": "Gait"
+            }, 
+            {
+              "name": "Average Max Pressure - LeftAverageMaxPressure",
+              "index" : -1, 
+              "datasetName" : "AvgMaxPressureDistributionRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Average Max Pressure - LeftAverageMaxPressure",
+              "index" : -1, 
+              "datasetName" : "AvgMaxPressureDistributionOther",
+              "recordType": "Gait"
+            }                                                                            
+          ],          
+          "title": "",
+          "xAxisTitle" : "Time_MS",
+          "yAxisTitle" : "Pressure_KPA",
+          "legendTitles" : "Left,Right,Other",
+          "xAxisFormula" : "{0}*10"
+        }      
+      ]
+    }
+  ]
+}

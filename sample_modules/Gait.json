@@ -1,0 +1,94 @@
+{
+    "name": "Gait",
+    "ViewName": "TabGeneric",
+    "enumName": "Gait",
+    "automatedTest": false,
+    "deafultViewName" : "GaitReport",
+    "items": [
+        {
+            "name": "Replay",
+            "title": "Replay",
+            "ViewName": "NodeRecordPreview",
+            "type": "GenericPreview",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },
+        {
+            "name": "MetaData",
+            "title": "MetaData",
+            "ViewName": "NodeMetadata",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },                              
+        {
+            "name": "GaitReport",
+            "title": "GaitReport",
+            "ViewName": "NodeGenericReportView",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {
+                "viewModelKey" : "GenericReport",
+                "reportKey": "GaitReport",
+                "showStandardList" : true,
+                "StandardListType" : "Gait"
+            }
+        },
+        {
+            "name": "PressureReport",
+            "title": "PressureReport",
+            "ViewName": "NodeGenericReportView",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {
+                "viewModelKey" : "GenericReport",
+                "reportKey": "GaitPressureReportFrame",
+                "showStandardList" : true,
+                "StandardListType" : "GaitPressure"                       
+            }
+        },
+        {
+            "name": "PressureAnalysis",
+            "title": "PressureAnalysis",
+            "ViewName": "NodePressureAnalysis",
+            "type": "",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },
+        {
+            "name": "Record",
+            "title": "Record",
+            "ViewName": "Record",
+            "type": "GenericRecord",
+            "isTreeViewItem": false,
+            "typeValue": {
+                "record" : {
+                   "types" :[
+                      {
+                        "title" : "Gait",
+                        "desc":  "Gait - Description",
+                        "type" : "Gait",
+                        "required"  : true,
+                        "hasPressureAnalysis": true,
+                        "gasApi" : "Gait"
+                      }               
+                   ]
+                }        
+              }
+        },
+        {
+            "name": "Footprints",
+            "title": "Footprints",
+            "ViewName": "NodeSampleEditor",
+            "type": "GenericSampleEditor",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        }                               
+    ],
+    "viewService": {
+        "userData" : {
+            "viewName" : "TestViewControl",
+            "viewModelName" : "TestUserDataVM"
+        }
+    }
+}

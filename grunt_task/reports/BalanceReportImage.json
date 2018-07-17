@@ -1,0 +1,42 @@
+{
+  "key": "BalanceReportImage",
+  "type": "ImageSection",
+  "title": "BalanceAnalysis",
+  "height": 0,
+  "jsonKeys": ["TrajactoryOfCOP", "ImageAvgColourBar"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "",
+      "items": [
+        {
+          "h5ColumnName": "BalanceReportImage",
+          "h5Index": [],
+          "row": 0,
+          "column": 0,
+          "datasetName": "TrajactoryOfCOP",
+          "wpfFormat": "NULL",
+          "title": "",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "NULL",
+          "formulaWpfFormat": "NULL"
+        },
+        {
+          "h5ColumnName": "Average  ColorBar",
+          "h5Index": [],
+          "row": 0,
+          "column": 0,
+          "datasetName": "ImageAvgColourBar",
+          "wpfFormat": "NULL",
+          "title": "",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "NULL",
+          "formulaValueIndex" : 0,
+          "formulaWpfFormat": "NULL"
+        }    
+      ]
+    }
+  ]
+}

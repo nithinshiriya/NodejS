@@ -1,0 +1,107 @@
+{
+    "name": "Concussion",
+    "ViewName": "TabGeneric",
+    "enumName": "Concussion",
+    "automatedTest": true,
+    "deafultViewName" : "ConcussionReport",
+    "items": [
+        {
+            "name": "Replay",
+            "title": "Replay",
+            "ViewName": "NodeRecordPreview",
+            "type": "GenericPreview",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },
+        {
+            "name": "MetaData",
+            "title": "MetaData",
+            "ViewName": "NodeMetadata",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        },                              
+        {
+            "name": "ConcussionReport",
+            "title": "ConcussionReport",
+            "ViewName": "NodeGenericReportView",
+            "type": "report",
+            "isTreeViewItem": true,
+            "typeValue": {
+                "viewModelKey" : "GenericReport",
+                "reportKey": "ConcussionReport",
+                "showStandardList" : false,
+                "StandardListType" : "Concussion"
+            }
+        },
+        {
+            "name": "Record",
+            "title": "Record",
+            "ViewName": "Record",
+            "type": "GenericRecord",
+            "isTreeViewItem": false,
+            "typeValue": {
+                "record" : {
+                   "types" :[
+                      {
+                        "title" : "ConcussionATEO",
+                        "desc":  "AnklesTogetherEyesOpen",
+                        "type" : "ConcussionATEO",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      },               
+                      {
+                        "title" : "ConcussionTaEO",
+                        "desc":  "TandemEyesOpen",
+                        "type" : "ConcussionTaEO",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      },               
+                      {
+                        "title" : "ConcussionOFEO",
+                        "desc":  "OneFootEyesOpen",
+                        "type" : "ConcussionOFEO",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      },             
+                      {
+                        "title" : "ConcussionATEC",
+                        "desc":  "AnklesTogetherEyesClosed",
+                        "type" : "ConcussionATEC",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      },               
+                      {
+                        "title" : "ConcussionTaEC",
+                        "desc":  "TandemEyesClosed",
+                        "type" : "ConcussionTaEC",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      },               
+                      {
+                        "title" : "ConcussionOFEC",
+                        "desc":  "OneFootEyesClosed",
+                        "type" : "ConcussionOFEC",
+                        "gasApi" : "Balance",
+                        "required"  : true,
+                        "hasPressureAnalysis": false
+                      }               
+                   ]
+                }        
+              }
+        },
+        {
+            "name": "Footprints",
+            "title": "Footprints",
+            "ViewName": "NodeSampleEditor",
+            "type": "GenericSampleEditor",
+            "isTreeViewItem": true,
+            "typeValue": {}
+        }                               
+    ]
+}

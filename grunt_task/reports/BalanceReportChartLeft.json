@@ -1,0 +1,31 @@
+{
+  "key": "BalanceReportChartLeft",
+  "type": "AreaLineChartSection",
+  "title": "Total Pressure change over time (Left Foot)",
+  "height": 50,
+  "jsonKeys": ["PressureChartLeft", "PressureChartLeftBack", "PressureChartLeftFore", "PressureChartOther"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5ColumnName": "BalanceReportChartLeft",
+          "h5Index": [],
+          "row": 0,
+          "column": 0,
+          "datasetName": "PressureChartLeft,PressureChartLeftBack,PressureChartLeftFore,PressureChartOther",
+          "wpfFormat": "NULL",
+          "title": "",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "NULL",
+          "formulaWpfFormat": "NULL",
+          "xAxisTitle" : "Frame number",
+          "yAxisTitle" : "Pressure (kPa)",
+          "legendTitles" : "Full,Rear,Fore,Other"
+        }        
+      ]
+    }
+  ]
+}

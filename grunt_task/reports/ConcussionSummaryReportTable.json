@@ -1,0 +1,42 @@
+{
+  "key": "ConcussionSummaryReportTable",
+  "type": "TableSection",
+  "title": "Concussion Summary Report",
+  "height": 0,
+  "jsonKeys": [
+    "BalanceFinalStats"
+  ],
+  "resourceKeys": [
+    {
+      "resourceName": "Concussion\\ConcussionSummaryReportTable.xaml",
+      "items": [
+        {
+          "xName": "xNamePathVelocity",
+          "h5": [
+            {
+              "name": "SummaryPathVelocity",
+              "index" : "PathVelocity", 
+              "datasetName" : "CustomConcussion",
+              "recordType": "Concussion"
+            }            
+          ],          
+          "formula": "",
+          "displayFormat": "{SummaryPathVelocity:0.00}"
+        },
+        {
+          "xName": "xNamePathSD",
+          "h5": [
+            {
+              "name": "SummaryPathSD",
+              "index" : "PathSD", 
+              "datasetName" : "CustomConcussion",
+              "recordType": "Concussion"
+            }           
+          ],      
+          "formula": "",    
+          "displayFormat": "{SummaryPathSD:0.00}"
+        }
+      ]
+    }    
+  ]
+}

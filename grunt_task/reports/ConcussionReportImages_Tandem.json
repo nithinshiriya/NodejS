@@ -1,0 +1,37 @@
+{
+  "key": "ConcussionReportImageTandem",
+  "type": "ImageSection",
+  "title": "ConcussionAnalysisTandem",
+  "height": 0,
+  "jsonKeys": ["TrajactoryOfCOP"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "ConcussionTaEO",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionTaEO"
+            }
+          ],
+          "title": "Tandem, Eyes Open"    
+        },
+        {
+          "h5": [
+            {
+              "name": "ConcussionTaEC",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionTaEC"
+            }
+          ],
+          "title": "Tandem, Eyes Closed"    
+        }
+      ]
+    }
+  ]
+}

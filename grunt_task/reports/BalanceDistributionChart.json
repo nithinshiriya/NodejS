@@ -1,0 +1,56 @@
+{
+  "key": "BalanceDistributionChart",
+  "type": "AreaLineChartSection",
+  "title": "Balance_Total_Force_Over_Time",
+  "height": 50,
+  "jsonKeys": ["PressureChartLeft", 
+                "PressureChartLeftBack", 
+                "PressureChartLeftFore", 
+                "PressureChartOther",
+                "PressureChartRight",
+                "PressureChartRightBack",
+                "PressureChartRightFore",
+                "PressureChartOther"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5ColumnName": "BalanceReportChartLeft",
+          "h5Index": [],
+          "row": 0,
+          "column": 0,
+          "datasetName": "PressureChartLeft,PressureChartLeftBack,PressureChartLeftFore,PressureChartOther",
+          "wpfFormat": "NULL",
+          "title": "Report_Left_Foot",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "NULL",
+          "formulaWpfFormat": "NULL",
+          "xAxisTitle" : "Time_Sec",
+          "yAxisTitle" : "Force",
+          "legendTitles" : "Full,Rear,Fore,Other",
+          "xAxisFormula" : "{0}*0.01"
+        },
+        {
+          "h5ColumnName": "BalanceReportChartRight",
+          "h5Index": [],
+          "row": 0,
+          "column": 0,
+          "datasetName": "PressureChartRight,PressureChartRightBack,PressureChartRightFore,PressureChartOther",
+          "wpfFormat": "NULL",
+          "title": "Report_Right_Foot",
+          "stdColumnNames": [],
+          "stdWpfFormat": "NULL",
+          "formula": "NULL",
+          "formulaWpfFormat": "NULL",
+          "xAxisTitle" : "Time_Sec",
+          "yAxisTitle" : "Force",
+          "legendTitles" : "Full,Rear,Fore,Other",
+          "xAxisFormula" : "{0}*0.01"
+        }        
+      ]                      
+    }
+  ]
+}

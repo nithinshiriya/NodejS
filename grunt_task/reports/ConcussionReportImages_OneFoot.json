@@ -1,0 +1,37 @@
+{
+  "key": "ConcussionReportImageOneFoot",
+  "type": "ImageSection",
+  "title": "ConcussionAnalysisOneFoot",
+  "height": 0,
+  "jsonKeys": ["TrajactoryOfCOP"],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "ConcussionOFEO",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionOFEO"
+            }
+          ],
+          "title": "Eyes Open"    
+        },
+        {
+          "h5": [
+            {
+              "name": "ConcussionOFEC",
+              "index" : -1, 
+              "datasetName" : "TrajactoryOfCOP",
+              "recordType": "ConcussionOFEC"
+            }
+          ],
+          "title": "Eyes Closed"    
+        }
+      ]
+    }
+  ]
+}

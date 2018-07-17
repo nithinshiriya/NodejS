@@ -1,0 +1,46 @@
+{
+  "key": "AverageForce",
+  "type": "AreaLineChartSection",
+  "title": "Gait_Pr_Avg_Pressure_Over_Time",
+  "height": 50,
+  "jsonKeys": [
+    "AvgForceDistributionLeft",
+    "AvgForceDistributionRight",
+    "AvgForceDistributionOther"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Average Force - LeftAverageForce",
+              "index" : -1, 
+              "datasetName" : "AvgForceDistributionLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Average Force - LeftAverageForce",
+              "index" : -1, 
+              "datasetName" : "AvgForceDistributionRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Average Force - LeftAverageForce",
+              "index" : -1, 
+              "datasetName" : "AvgForceDistributionOther",
+              "recordType": "Gait"
+            }                                                                                       
+          ],
+          "title": "",
+          "xAxisTitle" : "Time_MS",
+          "yAxisTitle" : "Pressure_KPA",
+          "legendTitles" : "Left,Right,Other",
+          "xAxisFormula" : "{0}*10"
+        }      
+      ]
+    }
+  ]
+}

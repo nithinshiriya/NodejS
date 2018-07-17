@@ -1,0 +1,110 @@
+{
+  "WeightBearing_AvgRightFore": {
+    "value": 37.80095513879409,
+    "sdValue": 8.311333251287353,
+    "value1": 0
+  },
+  "ConfidenceEllipse_AnteriorPosteriorVariation": {
+    "value": 0.8272280096085393,
+    "sdValue": 0.46668218596295086,
+    "value1": 0
+  },
+  "WeightBearing_AvgRight": {
+    "value": 46.97746154574739,
+    "sdValue": 4.662257538033946,
+    "value1": 0
+  },
+  "CenterOfPressure_SDCOPToAPAxis": {
+    "value": 0.10881305271208373,
+    "sdValue": 0.061217513995956686,
+    "value1": 0
+  },
+  "ConfidenceEllipse_Area": {
+    "value": 0.24772022839052063,
+    "sdValue": 0.29253557955386794,
+    "value1": 0
+  },
+  "WeightBearing_AvgRightForeBack": {
+    "value": 62.1990448612059,
+    "sdValue": 8.311333251287348,
+    "value1": 0
+  },
+  "Age": "Unknown",
+  "Title": "Adult Balance - n=12",
+  "WeightBearing_AvgRightMedial": {
+    "value": 46.43531538263853,
+    "sdValue": 15.526134856408436,
+    "value1": 0
+  },
+  "Weight": "Unknown",
+  "WeightBearing_AvgLeftLateral": {
+    "value": 47.284042757176046,
+    "sdValue": 14.179920688957168,
+    "value1": 0
+  },
+  "WeightBearing_AvgLeftRightMeanSI": {
+    "value": -6.0450769085052585,
+    "sdValue": 9.324515076067895,
+    "value1": 0
+  },
+  "WeightBearing_AvgRightLateral": {
+    "value": 53.56468461736142,
+    "sdValue": 15.526134856408424,
+    "value1": 0
+  },
+  "WeightBearing_AvgLeftMedial": {
+    "value": 52.71595724282397,
+    "sdValue": 14.179920688957136,
+    "value1": 0
+  },
+  "Ethnicity": "Unknown",
+  "Gender": "Male",
+  "CenterOfPressure_MeanCOPToMLAxis": {
+    "value": -2.135975952922705,
+    "sdValue": 1.0832025792920599,
+    "value1": 0
+  },
+  "CenterOfPressure_AvgVelocity": {
+    "value": 0.09404603391010119,
+    "sdValue": 0.053409478480353205,
+    "value1": 0
+  },
+  "ConfidenceEllipse_MedialLateralVariation": {
+    "value": 0.3287550921327276,
+    "sdValue": 0.1663578181101307,
+    "value1": 0
+  },
+  "CenterOfPressure_SDCOPToMLAxis": {
+    "value": 0.1413644049115347,
+    "sdValue": 0.0886810483502294,
+    "value1": 0
+  },
+  "h5FileName": "balance-male.h5",
+  "WeightBearing_AvgLeftBack": {
+    "value": 56.56474106604232,
+    "sdValue": 11.591637240999901,
+    "value1": 0
+  },
+  "moduleType": "Balance",
+  "CenterOfPressure_MeanCOPToAPAxis": {
+    "value": -0.6147162532485982,
+    "sdValue": 1.1444590514918824,
+    "value1": 0
+  },
+  "WeightBearing_AvgLeftFore": {
+    "value": 43.43525893395768,
+    "sdValue": 11.591637240999908,
+    "value1": 0
+  },
+  "Height": "Unknown",
+  "CenterOfPressure_SDFromCOPToMeanCOP": {
+    "value": 0.1840842700803382,
+    "sdValue": 0.09675504169424173,
+    "value1": 0
+  },
+  "WeightBearing_AvgLeft": {
+    "value": 53.02253845425264,
+    "sdValue": 4.662257538033953,
+    "value1": 0
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "GaitCycle_SingleSupport_Right": {
+    "value": 0.47567743606701945,
+    "sdValue": 2.1661545197056777,
+    "value1": 42.319831276845825
+  },
+  "Weight": "Unknown",
+  "GaitCycle_StancePhase_Left": {
+    "value": 0.6539786155202821,
+    "sdValue": 3.0200060987512,
+    "value1": 57.9095783327131
+  },
+  "GaitCycle_StepTime_Right": {
+    "value": 0.5644204493593877,
+    "sdValue": 1.1014484392510446,
+    "value1": 50.0753179108537
+  },
+  "GaitCycle_StancePhase_Avg": {
+    "value": 0.6513021681106466,
+    "sdValue": 1.921336726805137,
+    "value1": 57.71848060467217
+  },
+  "Spatial_AvgStrideLength_Total": {
+    "value": 131.87657905732618,
+    "sdValue": 13.237115977116513,
+    "value1": 0
+  },
+  "GaitCycle_SingleSupportTime_SI": {
+    "value": 0.06703789010999624,
+    "sdValue": 1.7139979424320753,
+    "value1": 0
+  },
+  "Temporal_AvgVelocity": {
+    "value": 118.23848214233729,
+    "sdValue": 17.88902632552331,
+    "value1": 0
+  },
+  "GaitCycle_StepTime_Left": {
+    "value": 0.5621245103129585,
+    "sdValue": 1.1014484392510486,
+    "value1": 49.92468208914631
+  },
+  "Title": "Adult Gait - n=36",
+  "Spatial_AvgToeInOut_Left": {
+    "value": 4.778841058863256,
+    "sdValue": 6.491403819172999,
+    "value1": 0
+  },
+  "Temporal_Cadence": {
+    "value": 107.18918321313475,
+    "sdValue": 9.856797584323369,
+    "value1": 0
+  },
+  "GaitCycle_SwingPhase_Left": {
+    "value": 0.4757385471781305,
+    "sdValue": 2.172945671836443,
+    "value1": 42.32484826619612
+  },
+  "Spatial_AvgStepLength_Right": {
+    "value": 65.93336551902706,
+    "sdValue": 6.54624528916552,
+    "value1": 0
+  },
+  "GaitCycle_SwingTime_SI": {
+    "value": -0.06826196470412335,
+    "sdValue": 1.717134884633957,
+    "value1": 0
+  },
+  "Height": "Unknown",
+  "Ethnicity": "Unknown",
+  "Gender": "Male",
+  "GaitCycle_StepTime_SI": {
+    "value": 0.15063582170740325,
+    "sdValue": 2.2028968785020933,
+    "value1": 0
+  },
+  "GaitCycle_StanceTime_SI": {
+    "value": -0.33184459989266424,
+    "sdValue": 2.3934662128352526,
+    "value1": 0
+  },
+  "Temporal_CycleTime": {
+    "value": 1.126544959672346,
+    "sdValue": 0.10243479344985039,
+    "value1": 0
+  },
+  "Spatial_AvgStrideWidth_Total": {
+    "value": 14.064005023368741,
+    "sdValue": 4.131876718278959,
+    "value1": 0
+  },
+  "GaitCycle_DoubleSupportTime_SI": {
+    "value": -0.29087759783102235,
+    "sdValue": 7.749329524769109,
+    "value1": 0
+  },
+  "Age": "Unknown",
+  "GaitCycle_DoubleSupport_Avg": {
+    "value": 0.17215422734861263,
+    "sdValue": 3.1728520163987106,
+    "value1": 15.146697455727756
+  },
+  "Spatial_AvgStepLength_SI": {
+    "value": 0.01868396861109329,
+    "sdValue": 1.7348080221564444,
+    "value1": 0
+  },
+  "GaitCycle_StancePhase_Right": {
+    "value": 0.6480648919753089,
+    "sdValue": 1.6731311110193694,
+    "value1": 57.4798129720905
+  },
+  "GaitCycle_SwingPhase_Right": {
+    "value": 0.4749919863315696,
+    "sdValue": 1.9482445007173472,
+    "value1": 42.25609854050408
+  },
+  "GaitCycle_SingleSupport_Left": {
+    "value": 0.47494833553791893,
+    "sdValue": 1.9498269896578755,
+    "value1": 42.25251497668243
+  },
+  "moduleType": "Gait",
+  "Spatial_AvgToeInOut_Right": {
+    "value": 5.615647057578808,
+    "sdValue": 5.424629651288445,
+    "value1": 0
+  },
+  "GaitCycle_SwingPhase_Avg": {
+    "value": 0.4752427915616996,
+    "sdValue": 1.921336726805141,
+    "value1": 42.281519395327834
+  },
+  "Spatial_AvgStepLength_Left": {
+    "value": 65.9432135382991,
+    "sdValue": 6.8575815829085105,
+    "value1": 0
+  },
+  "h5FileName": "",
+  "Temporal_AvgStrideVelocity": {
+    "value": 118.46649278285025,
+    "sdValue": 17.450713760247872,
+    "value1": 0
+  }
+}

@@ -1,0 +1,1051 @@
+{
+  "key": "GaitReportTable",
+  "type": "TableSection",
+  "title": "Gait analysis report",
+  "height": 0,
+  "jsonKeys": [
+    "AvgSpatialStatsLeft",
+    "AvgSpatialStatsRight",
+    "AvgSpatialStatsTotal",
+    "AvgTemporalStatsLeft",
+    "AvgTemporalStatsRight",
+    "AvgTemporalStatsTotal",
+    "GlobalStats",
+    "StridesCnt"
+  ],
+  "resourceKeys": [
+    {
+      "resourceName": "Gait\\GaitReportTrialMeasurements.xaml",
+      "items": [
+        {
+          "xName": "TrialMesure_StepsTaken",
+          "h5": [
+            {
+              "name": "FootCnt",
+              "index" : 0, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }            
+          ],          
+          "formula": "",
+          "displayFormat": "{FootCnt:0}"
+        },
+        {
+          "xName": "TrialMesure_PassesOnFloor",
+          "h5": [
+            {
+              "name": "PassTotalCnt",
+              "index" : 1, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }           
+          ],      
+          "formula": "",    
+          "displayFormat": "{PassTotalCnt:0.00}"
+        },
+        {
+          "xName": "TrialMesure_StrideCount_Left",
+          "h5": [
+            {
+              "name": "StridesCntLeft",
+              "index" : 1, 
+              "datasetName" : "StridesCnt",
+              "recordType": "Gait"
+            }           
+          ],             
+          "formula": "",    
+          "displayFormat": "{StridesCntLeft:0.00}"
+        },
+        {
+          "xName": "TrialMesure_StrideCount_Right",
+          "h5": [
+            {
+              "name": "StridesCntRight",
+              "index" : 2, 
+              "datasetName" : "StridesCnt",
+              "recordType": "Gait"
+            }           
+          ],          
+          "formula": "",    
+          "displayFormat": "{StridesCntRight:0.00}" 
+        },
+        {
+          "xName": "TrialMesure_StrideCount_Total",
+          "h5": [
+            {
+              "name": "StridesCntTotal",
+              "index" : 0, 
+              "datasetName" : "StridesCnt",
+              "recordType": "Gait"
+            }           
+          ],   
+          "formula": "",    
+          "displayFormat": "{StridesCntTotal:0.00}" 
+        }
+      ]
+    },
+    {
+      "resourceName": "Gait\\GaitReportTableSpatial.xaml",
+      "items": [
+        {
+          "xName": "Spatial_TotalDistance",
+          "h5": [
+            {
+              "name": "ValidDistance",
+              "index" : 6, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }           
+          ],   
+          "formula": "",    
+          "displayFormat": "{ValidDistance:0.00}"  
+        },
+        {
+          "xName": "Spatial_AvgStepLength_Left",
+          "h5": [
+            {
+              "name": "StepLengthLeft",
+              "index" : 0, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StepLengthLeftSD",
+              "index" : 5, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],           
+          "formula": "(({StepLengthLeft}-{StepLengthLeftSD})/{StepLengthLeftSD})*100",    
+          "displayFormat": "{StepLengthLeft:0.00} ± {StepLengthLeftSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgStepLength_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgStepLength_Left.value:0.00} ± {Spatial_AvgStepLength_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgStepLength_Left.value} - ({Spatial_AvgStepLength_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgStepLength_Left.value} + ({Spatial_AvgStepLength_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },     
+          "rangeInBetween" : "StepLengthLeft",
+          "difference" : {
+              "formula" : "(({0}-{1})/{1})*100",
+              "displayFormat": "{0:0.00}%",
+              "h5FieldName" : "StepLengthLeft",
+              "normativeFieldName": "Spatial_AvgStepLength_Left.value"              
+          }
+        },
+        {
+          "xName": "Spatial_AvgStepLength_Right",
+          "h5": [
+            {
+              "name": "StepLengthRight",
+              "index" : 1, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StepLengthRightSD",
+              "index" : 6, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],           
+          "formula": "(({StepLengthRight}-{StepLengthRightSD})/{StepLengthRightSD})*100",    
+          "displayFormat": "{StepLengthRight:0.00} ± {StepLengthRightSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgStepLength_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgStepLength_Right.value:0.00} ± {Spatial_AvgStepLength_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgStepLength_Right.value} - ({Spatial_AvgStepLength_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgStepLength_Right.value} + ({Spatial_AvgStepLength_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StepLengthRight",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StepLengthRight",
+            "normativeFieldName": "Spatial_AvgStepLength_Right.value"              
+          }
+        },
+        {
+          "xName": "Spatial_AvgStepLength_SIndex",
+          "h5": [
+            {
+              "name": "StepLengthSymmetryIndex",
+              "index" : 10, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            }                     
+          ],               
+          "formula": "(({StepLengthSymmetryIndex}-{StepLengthRightSD})/{StepLengthRightSD})*100",    
+          "displayFormat": "{StepLengthSymmetryIndex:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgStepLength_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgStepLength_SI.value:0.00} ± {Spatial_AvgStepLength_SI.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgStepLength_SI.value} - ({Spatial_AvgStepLength_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgStepLength_SI.value} + ({Spatial_AvgStepLength_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StepLengthSymmetryIndex",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StepLengthSymmetryIndex",
+            "normativeFieldName": "Spatial_AvgStepLength_SI.value"              
+          }
+        },        
+        {
+          "xName": "Spatial_AvgStrideLength_Total",
+          "h5": [
+            {
+              "name": "StrideLength",
+              "index" : 2, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StrideLengthSD",
+              "index" : 7, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],           
+          "formula": "(({StrideLength}-{StrideLengthSD})/{StrideLengthSD})*100",    
+          "displayFormat": "{StrideLength:0.00} ± {StrideLengthSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgStrideLength_Total"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgStrideLength_Total.value:0.00} ± {Spatial_AvgStrideLength_Total.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgStrideLength_Total.value} - ({Spatial_AvgStrideLength_Total.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgStrideLength_Total.value} + ({Spatial_AvgStrideLength_Total.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StrideLength",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "AvgSpatialStatsTotal",
+            "normativeFieldName": "Spatial_AvgStrideLength_Total.value"              
+          }
+        },
+        {
+          "xName": "Spatial_AvgStrideWidth_Total",
+          "h5": [
+            {
+              "name": "StrideWidth",
+              "index" : 3, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StrideWidthSD",
+              "index" : 8, 
+              "datasetName" : "AvgSpatialStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],  
+          "formula": "(({StrideWidth}-{StrideWidthSD})/{StrideWidthSD})*100",    
+          "displayFormat": "{StrideWidth:0.00} ± {StrideWidthSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgStrideWidth_Total"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgStrideWidth_Total.value:0.00} ± {Spatial_AvgStrideWidth_Total.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgStrideWidth_Total.value} - ({Spatial_AvgStrideWidth_Total.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgStrideWidth_Total.value} + ({Spatial_AvgStrideWidth_Total.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StrideWidth",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StrideWidth",
+            "normativeFieldName": "Spatial_AvgStrideWidth_Total.value"              
+          }
+        },
+        {
+          "xName": "Spatial_AvgToeInOut_Left",
+          "h5": [
+            {
+              "name": "ToeInOutLeft",
+              "index" : 4, 
+              "datasetName" : "AvgSpatialStatsLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "ToeInOutLeftSD",
+              "index" : 9, 
+              "datasetName" : "AvgSpatialStatsLeft",
+              "recordType": "Gait"
+            }                       
+          ],  
+          "formula": "(({ToeInOutLeft}-{ToeInOutLeftSD})/{ToeInOutLeftSD})*100",    
+          "displayFormat": "{ToeInOutLeft:0.00} ± {ToeInOutLeftSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgToeInOut_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgToeInOut_Left.value:0.00} ± {Spatial_AvgToeInOut_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgToeInOut_Left.value} - ({Spatial_AvgToeInOut_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgToeInOut_Left.value} + ({Spatial_AvgToeInOut_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "ToeInOutLeft",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "AvgSpatialStatsLeft",
+            "normativeFieldName": "Spatial_AvgToeInOut_Left.value"              
+          }
+        },
+        {
+          "xName": "Spatial_AvgToeInOut_Right",
+          "h5": [
+            {
+              "name": "ToeInOutRight",
+              "index" : 4, 
+              "datasetName" : "AvgSpatialStatsRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "ToeInOuRightSD",
+              "index" : 9, 
+              "datasetName" : "AvgSpatialStatsRight",
+              "recordType": "Gait"
+            }                       
+          ],  
+          "formula": "(({ToeInOutRight}-{ToeInOuRightSD})/{ToeInOuRightSD})*100",    
+          "displayFormat": "{ToeInOutRight:0.00} ± {ToeInOuRightSD:0.00}",
+          "normative" : {
+              "fields" : ["Spatial_AvgToeInOut_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{Spatial_AvgToeInOut_Right.value:0.00} ± {Spatial_AvgToeInOut_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{Spatial_AvgToeInOut_Right.value} - ({Spatial_AvgToeInOut_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{Spatial_AvgToeInOut_Right.value} + ({Spatial_AvgToeInOut_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "ToeInOutRight",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "ToeInOutRight",
+            "normativeFieldName": "Spatial_AvgToeInOut_Right.value"              
+          }
+        }
+      ]
+    },
+    {
+      "resourceName": "Gait\\GaitReportTableTemporal.xaml",
+      "items": [
+        {
+          "xName": "Temporal_TotalAmbulationTime",
+          "h5": [
+            {
+              "name": "TotalTime",
+              "index" : 4, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "TotalTimeSD",
+              "index" : 5, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }                       
+          ],            
+          "formula": "",    
+          "displayFormat": "{TotalTime:0.00} / {TotalTimeSD:0.00}",
+          "normative" : {
+            "fields" : ["Temporal_TotalAmbulationTime"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{Temporal_TotalAmbulationTime.value:0.00} ± {Temporal_TotalAmbulationTime.SDValue:0.00}",
+            "lowerLimitFormula" : "{Temporal_TotalAmbulationTime.value} - ({Temporal_TotalAmbulationTime.SDValue} * 2)",
+            "upperLimitFormula" : "{Temporal_TotalAmbulationTime.value} + ({Temporal_TotalAmbulationTime.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },
+          "rangeInBetween" : "TotalTime",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "TotalTime",
+            "normativeFieldName": "Temporal_TotalAmbulationTime.value"              
+          }            
+        },
+        {
+          "xName": "Temporal_AvgVelocity",
+          "h5": [
+            {
+              "name": "StrideVelocity",
+              "index" : 17, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],            
+          "formula": "",    
+          "displayFormat": "{StrideVelocity:0.00}",
+          "normative" : {
+            "fields" : ["Temporal_AvgStrideVelocity"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{Temporal_AvgStrideVelocity.value:0.00} ± {Temporal_AvgStrideVelocity.SDValue:0.00}",
+            "lowerLimitFormula" : "{Temporal_AvgStrideVelocity.value} - ({Temporal_AvgStrideVelocity.SDValue} * 2)",
+            "upperLimitFormula" : "{Temporal_AvgStrideVelocity.value} + ({Temporal_AvgStrideVelocity.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },
+          "rangeInBetween" : "StrideVelocity",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StrideVelocity",
+            "normativeFieldName": "Temporal_AvgStrideVelocity.value"              
+          }            
+        },
+        {
+          "xName": "Temporal_CycleTime",
+          "h5": [
+            {
+              "name": "CycleTime",
+              "index" : 0, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                       
+          ],            
+          "formula": "",    
+          "displayFormat": "{CycleTime:0.00}",
+          "normative" : {
+            "fields" : ["Temporal_CycleTime"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{Temporal_CycleTime.value:0.00} ± {Temporal_CycleTime.SDValue:0.00}",
+            "lowerLimitFormula" : "{Temporal_CycleTime.value} - ({Temporal_CycleTime.SDValue} * 2)",
+            "upperLimitFormula" : "{Temporal_CycleTime.value} + ({Temporal_CycleTime.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },
+          "rangeInBetween" : "CycleTime",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "CycleTime",
+            "normativeFieldName": "Temporal_CycleTime.value"              
+          }            
+        },
+        {
+          "xName": "Temporal_Cadence",
+          "h5": [
+            {
+              "name": "Cadence",
+              "index" : 8, 
+              "datasetName" : "GlobalStats",
+              "recordType": "Gait"
+            }                       
+          ],            
+          "formula": "",    
+          "displayFormat": "{Cadence:0.00}",
+          "normative" : {
+            "fields" : ["Temporal_Cadence"],
+            "columnFormula" : "",
+            "columnDisplayFormat" : "{Temporal_Cadence.value:0.00} ± {Temporal_Cadence.SDValue:0.00}",
+            "lowerLimitFormula" : "{Temporal_Cadence.value} - ({Temporal_Cadence.SDValue} * 2)",
+            "upperLimitFormula" : "{Temporal_Cadence.value} + ({Temporal_Cadence.SDValue} * 2)",              
+            "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+            "cutOffUpperLimit": "9999",
+            "cutOffLowerLimit": "9999"
+          },
+          "rangeInBetween" : "Cadence",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "Cadence",
+            "normativeFieldName": "Temporal_CycleTime.value"              
+          }            
+        }                 
+      ]
+    },
+    {
+      "resourceName": "Gait\\GaitReportTableGait.xaml",
+      "items": [
+        {
+          "xName": "GaitCycle_StepTime_Left",
+          "h5": [
+            {
+              "name": "StepTimeLeft",
+              "index" : 1, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StepTimeLeftSD",
+              "index" : 3, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                          
+          ], 
+          "formula": "",    
+          "displayFormat": "{StepTimeLeft:0.00 / StepTimeLeftSD:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_StepTime_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StepTime_Left.value:0.00} / {GaitCycle_StepTime_Left.value1:0.00} ± {GaitCycle_StepTime_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StepTime_Left.value1} - ({GaitCycle_StepTime_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StepTime_Left.value1} + ({GaitCycle_StepTime_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StepTimeLeft",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StepTimeLeft",
+            "normativeFieldName": "GaitCycle_StepTime_Left.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_StepTime_Right",
+          "h5": [
+            {
+              "name": "StepTimeRight",
+              "index" : 2, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "StepTimeRightSD",
+              "index" : 4, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                          
+          ],
+          "formula": "",    
+          "displayFormat": "{StepTimeRight:0.00 / StepTimeRightSD:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_StepTime_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StepTime_Right.value:0.00} / {GaitCycle_StepTime_Right.value1:0.00} ± {GaitCycle_StepTime_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StepTime_Right.value1} - ({GaitCycle_StepTime_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StepTime_Right.value1} + ({GaitCycle_StepTime_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StepTimeRight",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StepTimeRight",
+            "normativeFieldName": "GaitCycle_StepTime_Right.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_StepTime_SIndex",
+          "h5": [
+            {
+              "name": "StepTimeSymmetryIndex",
+              "index" : 36, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                        
+          ],
+          "formula": "",    
+          "displayFormat": "{StepTimeSymmetryIndex:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_StepTime_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StepTime_SI.value:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StepTime_SI.value} - ({GaitCycle_StepTime_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StepTime_SI.value} + ({GaitCycle_StepTime_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StepTimeSymmetryIndex",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StepTimeSymmetryIndex",
+            "normativeFieldName": "GaitCycle_StepTime_SI.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_SwingPhase_Left",
+          "h5": [
+            {
+              "name": "SwingTimeLeft",
+              "index" : 7, 
+              "datasetName" : "AvgTemporalStatsLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeSwingLeft",
+              "index" : 8, 
+              "datasetName" : "AvgTemporalStatsLeft",
+              "recordType": "Gait"
+            }                         
+          ],
+          "formula": "",    
+          "displayFormat": "{SwingTimeLeft:0.00} / {PerCycleTimeSwingLeft:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_SwingPhase_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SwingPhase_Left.value:0.00} / {GaitCycle_SwingPhase_Left.value1:0.00} ± {GaitCycle_SwingPhase_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SwingPhase_Left.value1} - ({GaitCycle_SwingPhase_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SwingPhase_Left.value1} + ({GaitCycle_SwingPhase_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "SwingTimeLeft",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "SwingTimeLeft",
+            "normativeFieldName": "GaitCycle_SwingPhase_Left.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_SwingPhase_Right",
+          "h5": [
+            {
+              "name": "SwingTimeRight",
+              "index" : 7, 
+              "datasetName" : "AvgTemporalStatsRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeSwingRight",
+              "index" : 8, 
+              "datasetName" : "AvgTemporalStatsRight",
+              "recordType": "Gait"
+            }                         
+          ],
+          "formula": "",    
+          "displayFormat": "{SwingTimeRight:0.00} / {PerCycleTimeSwingRight:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_SwingPhase_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SwingPhase_Right.value:0.00} / {GaitCycle_SwingPhase_Right.value1:0.00} ± {GaitCycle_SwingPhase_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SwingPhase_Right.value1} - ({GaitCycle_SwingPhase_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SwingPhase_Right.value1} + ({GaitCycle_SwingPhase_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "SwingTimeRight",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "SwingTimeRight",
+            "normativeFieldName": "GaitCycle_SwingPhase_Right.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_SwingPhase_Avg",
+          "h5": [
+            {
+              "name": "SwingTimeTotal",
+              "index" : 7, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeSwingTotal",
+              "index" : 8, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                         
+          ],          
+          "formula": "",    
+          "displayFormat": "{SwingTimeTotal:0.00} / {PerCycleTimeSwingTotal:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_SwingPhase_Avg"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SwingPhase_Avg.value:0.00} / {GaitCycle_SwingPhase_Avg.value1:0.00} ± {GaitCycle_SwingPhase_Avg.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SwingPhase_Avg.value1} - ({GaitCycle_SwingPhase_Avg.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SwingPhase_Avg.value1} + ({GaitCycle_SwingPhase_Avg.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "SwingTimeTotal",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "SwingTimeTotal",
+            "normativeFieldName": "GaitCycle_SwingPhase_Avg.value"              
+          }
+        },
+        {          
+          "xName": "GaitCycle_SwingPhase_SIndex",
+          "h5": [
+            {
+              "name": "SwingTimePerCycleTimeSwingSymmetryIndex",
+              "index" : 38, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                         
+          ],           
+          "formula": "",    
+          "displayFormat": "{SwingTimePerCycleTimeSwingSymmetryIndex:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_SwingTime_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SwingTime_SI.value:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SwingTime_SI.value} - ({GaitCycle_SwingTime_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SwingTime_SI.value} + ({GaitCycle_SwingTime_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "SwingTimePerCycleTimeSwingSymmetryIndex",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "SwingTimePerCycleTimeSwingSymmetryIndex",
+            "normativeFieldName": "GaitCycle_SwingTime_SI.value"              
+          }
+        },        
+        {
+          "xName": "GaitCycle_StancePhase_Left",
+          "h5": [
+            {
+              "name": "StanceTimeLeft",
+              "index" : 5, 
+              "datasetName" : "AvgTemporalStatsLeft",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeStanceLeft",
+              "index" : 6, 
+              "datasetName" : "AvgTemporalStatsLeft",
+              "recordType": "Gait"
+            }                                      
+          ],          
+          "formula": "",    
+          "displayFormat": "{StanceTimeLeft:0.00} / {PerCycleTimeStanceLeft:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_StancePhase_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StancePhase_Left.value:0.00} / {GaitCycle_StancePhase_Left.value1:0.00} ± {GaitCycle_StancePhase_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StancePhase_Left.value1} - ({GaitCycle_StancePhase_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StancePhase_Left.value1} + ({GaitCycle_StancePhase_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StanceTimeLeft",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StanceTimeLeft",
+            "normativeFieldName": "GaitCycle_StancePhase_Left.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_StancePhase_Right",
+          "h5": [
+            {
+              "name": "StanceTimeRight",
+              "index" : 5, 
+              "datasetName" : "AvgTemporalStatsRight",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeStanceRight",
+              "index" : 6, 
+              "datasetName" : "AvgTemporalStatsRight",
+              "recordType": "Gait"
+            }                                      
+          ],          
+          "formula": "",    
+          "displayFormat": "{StanceTimeRight:0.00} / {PerCycleTimeStanceRight:0.00}",          
+          "normative" : {
+              "fields" : ["GaitCycle_StancePhase_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StancePhase_Right.value:0.00} / {GaitCycle_StancePhase_Right.value1:0.00} ± {GaitCycle_StancePhase_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StancePhase_Right.value1} - ({GaitCycle_StancePhase_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StancePhase_Right.value1} + ({GaitCycle_StancePhase_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StanceTimeRight",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StanceTimeRight",
+            "normativeFieldName": "GaitCycle_StancePhase_Right.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_StancePhase_Avg",
+          "h5": [
+            {
+              "name": "StanceTimeTotal",
+              "index" : 5, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "PerCycleTimeStanceTotal",
+              "index" : 6, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                                      
+          ],          
+          "formula": "",    
+          "displayFormat": "{StanceTimeTotal:0.00} / {PerCycleTimeStanceTotal:0.00}",            
+          "normative" : {
+              "fields" : ["GaitCycle_StancePhase_Avg"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StancePhase_Avg.value:0.00} / {GaitCycle_StancePhase_Avg.value1:0.00} ± {GaitCycle_StancePhase_Avg.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StancePhase_Avg.value1} - ({GaitCycle_StancePhase_Avg.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StancePhase_Avg.value1} + ({GaitCycle_StancePhase_Avg.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StanceTimeTotal",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StanceTimeTotal",
+            "normativeFieldName": "GaitCycle_StancePhase_Avg.value"              
+          }
+        },
+        {      
+          "xName": "GaitCycle_StancePhase_SIndex",
+          "h5": [
+            {
+              "name": "StanceTimePerCycleTimeStanceSymmetryIndex",
+              "index" : 37, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                                   
+          ],          
+          "formula": "",    
+          "displayFormat": "{StanceTimePerCycleTimeStanceSymmetryIndex:0.00}",
+          "normative" : {
+              "fields" : ["GaitCycle_StanceTime_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_StanceTime_SI.value:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_StanceTime_SI.value} - ({GaitCycle_StanceTime_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_StanceTime_SI.value} + ({GaitCycle_StanceTime_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "StanceTimePerCycleTimeStanceSymmetryIndex",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "StanceTimePerCycleTimeStanceSymmetryIndex",
+            "normativeFieldName": "GaitCycle_StanceTime_SI.value"              
+          }
+        },        
+        {
+          "xName": "GaitCycle_DoubleSupport_LeftRearRightFore",
+          "h5": [
+            {
+              "name": "DoubleSupportTimeLeftRear",
+              "index" : 41, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "DoubleSupportTimeRightFore",
+              "index" : 43, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                     
+          ],          
+          "formula": "",    
+          "displayFormat": "{DoubleSupportTimeLeftRear:0.00} / {DoubleSupportTimeRightFore:0.00}",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "DoubleSupportTimeLeftRear",
+            "normativeFieldName": ""              
+          }
+        },
+        {
+          "xName": "GaitCycle_DoubleSupport_RightRearLeftFore",
+          "h5": [
+            {
+              "name": "DoubleSupportTimeRightRear",
+              "index" : 42, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "DoubleSupportTimeLeftFore",
+              "index" : 44, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                     
+          ],          
+          "formula": "",    
+          "displayFormat": "{DoubleSupportTimeRightRear:0.00} / {DoubleSupportTimeLeftFore:0.00}",
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "DoubleSupportTimeRightRear",
+            "normativeFieldName": ""              
+          }
+        },
+        {
+          "xName": "GaitCycle_DoubleSupport_SIndex",
+          "h5": [
+            {
+              "name": "DoubleSupportSymmetryIndex",
+              "index" : 40, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                    
+          ],          
+          "formula": "",    
+          "displayFormat": "{DoubleSupportSymmetryIndex:0.00}",                    
+          "normative" : {
+              "fields" : ["GaitCycle_DoubleSupportTime_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_DoubleSupportTime_SI.value:0.00} ± {GaitCycle_DoubleSupportTime_SI.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_DoubleSupportTime_SI.value} - ({GaitCycle_DoubleSupportTime_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_DoubleSupportTime_SI.value} + ({GaitCycle_DoubleSupportTime_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "DoubleSupportSymmetryIndex",          
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "DoubleSupportSymmetryIndex",
+            "normativeFieldName": "GaitCycle_DoubleSupportTime_SI.value"              
+          }
+        },          
+        {
+          "xName": "GaitCycle_SingleSupport_Left",
+          "h5": [
+            {
+              "name": "LeftSingleSupportTime",
+              "index" : 10, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "LeftSingleSupportTimeSD",
+              "index" : 14, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                             
+          ],          
+          "formula": "",    
+          "displayFormat": "{LeftSingleSupportTime:0.00} / {LeftSingleSupportTimeSD:0.00}", 
+          "title": "NULL",
+          "normative" : {
+              "fields" : ["GaitCycle_SingleSupport_Left"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SingleSupport_Left.value:0.00} ± {GaitCycle_SingleSupport_Left.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SingleSupport_Left.value} - ({GaitCycle_SingleSupport_Left.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SingleSupport_Left.value} + ({GaitCycle_SingleSupport_Left.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "LeftSingleSupportTime",      
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "LeftSingleSupportTime",
+            "normativeFieldName": "GaitCycle_SingleSupport_Left.value"              
+          } 
+        },
+        {
+          "xName": "GaitCycle_SingleSupport_Right",
+          "h5": [
+            {
+              "name": "RightSingleSupportTime",
+              "index" : 11, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            },
+            {
+              "name": "RightSingleSupportTimeSD",
+              "index" : 15, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                             
+          ],          
+          "formula": "",    
+          "displayFormat": "{RightSingleSupportTime:0.00} / {RightSingleSupportTimeSD:0.00}",           
+          "title": "NULL",
+          "normative" : {
+              "fields" : ["GaitCycle_SingleSupport_Right"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SingleSupport_Right.value:0.00} ± {GaitCycle_SingleSupport_Right.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SingleSupport_Right.value} - ({GaitCycle_SingleSupport_Right.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SingleSupport_Right.value} + ({GaitCycle_SingleSupport_Right.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "RightSingleSupportTime",     
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "RightSingleSupportTime",
+            "normativeFieldName": "GaitCycle_SingleSupport_Right.value"              
+          }
+        },
+        {
+          "xName": "GaitCycle_SingleSupport_SIndex",
+          "h5": [
+            {
+              "name": "SingleSupportTimeSymmetryIndex",
+              "index" : 39, 
+              "datasetName" : "AvgTemporalStatsTotal",
+              "recordType": "Gait"
+            }                            
+          ],          
+          "formula": "(({0}-{1})/{1})*100",    
+          "displayFormat": "{SingleSupportTimeSymmetryIndex:0.00}", 
+          "title": "NULL",
+          "normative" : {
+              "fields" : ["GaitCycle_SingleSupportTime_SI"],
+              "columnFormula" : "",
+              "columnDisplayFormat" : "{GaitCycle_SingleSupportTime_SI.value:0.00} ± {GaitCycle_SingleSupportTime_SI.SDValue:0.00}",
+              "lowerLimitFormula" : "{GaitCycle_SingleSupportTime_SI.value} - ({GaitCycle_SingleSupportTime_SI.SDValue} * 2)",
+              "upperLimitFormula" : "{GaitCycle_SingleSupportTime_SI.value} + ({GaitCycle_SingleSupportTime_SI.SDValue} * 2)",              
+              "rangeDisplayFormat" : "{lowerLimitFormula:0.00} — {upperLimitFormula:0.00}",
+              "cutOffUpperLimit": "9999",
+              "cutOffLowerLimit": "9999"
+          },          
+          "rangeInBetween" : "SingleSupportTimeSymmetryIndex",     
+          "difference" : {
+            "formula" : "(({0}-{1})/{1})*100",
+            "displayFormat": "{0:0.00}%",
+            "h5FieldName" : "SingleSupportTimeSymmetryIndex",
+            "normativeFieldName": "GaitCycle_SingleSupportTime_SI.value"              
+          } 
+        }        
+      ]
+    }
+  ]
+}

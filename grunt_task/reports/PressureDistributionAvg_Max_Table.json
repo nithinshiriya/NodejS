@@ -1,0 +1,148 @@
+{
+  "key": "PressureDistributionAvgMaxTable",
+  "type": "StaticTableSection",
+  "title": "",
+  "height": 0,
+  "jsonKeys": [
+    "AvgGaitPressureStats"
+  ],
+  "resourceKeys": [
+    {
+      "resourceName": "GaitPressure\\GaitPressureDistributionFrame.xaml",
+      "items": [
+        {
+          "xName": "Avg4AvgPressureDistributionLeft",
+          "h5": [
+            {
+              "name": "Avg4AvgPressureDistributionLeft",
+              "index" : 36, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4AvgPressureDistributionLeftSD",
+              "index" : 37, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],         
+          "displayFormat": "{Avg4AvgPressureDistributionLeft:0.00} ± {Avg4AvgPressureDistributionLeftSD:0.00}"
+        },
+        {
+          "xName": "Avg4AvgPressureDistributionRight",
+          "h5": [
+            {
+              "name": "Avg4AvgPressureDistributionRight",
+              "index" : 38, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4AvgPressureDistributionRightSD",
+              "index" : 39, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],        
+          "displayFormat": "{Avg4AvgPressureDistributionRight:0.00} ± {Avg4AvgPressureDistributionRightSD:0.00}"
+        },
+        {
+          "xName": "Avg4MaxPressureDistributionLeft",
+          "h5": [
+            {
+              "name": "Avg4MaxPressureDistributionLeft",
+              "index" : 40, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4MaxAvgPressureDistributionLeftSD",
+              "index" : 41, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],       
+          "displayFormat": "{Avg4MaxPressureDistributionLeft:0.00} ± {Avg4MaxAvgPressureDistributionLeftSD:0.00}"
+        },
+        {
+          "xName": "Avg4MaxAvgPressureDistributionRight",
+          "h5": [
+            {
+              "name": "Avg4MaxAvgPressureDistributionRight",
+              "index" : 42, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4MaxAvgPressureDistributionRight",
+              "index" : 43, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],      
+          "displayFormat": "{Avg4MaxAvgPressureDistributionRight:0.00} ± {Avg4MaxAvgPressureDistributionRight:0.00}"
+        },
+        {
+          "xName": "Avg4AvgPressureDistributionOther",
+          "h5": [
+            {
+              "name": "Avg4AvgPressureDistributionOther",
+              "index" : 50, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4AvgPressureDistributionOtherSD",
+              "index" : 51, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],      
+          "displayFormat": "{Avg4AvgPressureDistributionOther:0.00} ± {Avg4AvgPressureDistributionOtherSD:0.00}"
+        },
+        {
+          "xName": "Avg4AvgPressureDistributionSI",
+          "h5": [
+            {
+              "name": "Avg4AvgPressureDistributionSI",
+              "index" : 70, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],       
+          "displayFormat": "{Avg4AvgPressureDistributionSI:0.00}"
+        },
+        {
+          "xName": "Avg4MaxAvgPressureDistributionOther",
+          "h5": [
+            {
+              "name": "Avg4MaxAvgPressureDistributionOther",
+              "index" : 52, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            },
+            {
+              "name": "Avg4MaxAvgPressureDistributionOtherSD",
+              "index" : 53, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],       
+          "displayFormat": "{Avg4MaxAvgPressureDistributionOther:0.00} ± {Avg4MaxAvgPressureDistributionOtherSD:0.00}"
+        },
+        {
+          "xName": "Avg4MaxPressureDistributionSI",
+          "h5": [
+            {
+              "name": "Avg4MaxPressureDistributionSI",
+              "index" : 71, 
+              "datasetName" : "AvgGaitPressureStats",
+              "recordType": "Gait"
+            }
+          ],          
+          "displayFormat": "{Avg4MaxPressureDistributionSI:0.00}"
+        }
+      ]
+    }
+  ]
+}

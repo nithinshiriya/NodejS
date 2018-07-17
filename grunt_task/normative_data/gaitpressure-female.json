@@ -1,0 +1,155 @@
+{
+  "TimeChangeRearToFore_Seconds_Right": {
+    "value": 0.3697999684196571,
+    "sdValue": 0.06453600627457787,
+    "value1": 0
+  },
+  "AvgPercentRear_Right": {
+    "value": 39.294596761385236,
+    "sdValue": 6.398211285253249,
+    "value1": 0
+  },
+  "ContactTime_Left_Fore": {
+    "value": 27.688970309269003,
+    "sdValue": 6.045260612310795,
+    "value1": 0
+  },
+  "AvgPercentRear_Left": {
+    "value": 40.1141142659455,
+    "sdValue": 8.108379791046566,
+    "value1": 0
+  },
+  "AvgPercentFore_Right": {
+    "value": 60.705403238614764,
+    "sdValue": 6.3982112852532484,
+    "value1": 0
+  },
+  "Title": "Adult Gait - n=25",
+  "AvgContactTime_Time_Right": {
+    "value": 0.58084916006216,
+    "sdValue": 0.054297093739483736,
+    "value1": 0
+  },
+  "h5FileName": "gaitpressure-female.h5",
+  "AvgPercentMedial_Left": {
+    "value": 51.6206751572534,
+    "sdValue": 5.156211860387348,
+    "value1": 0
+  },
+  "Avg4AvgLeftRightSI": {
+    "value": 0.5857983391507182,
+    "sdValue": 4.695289235383942,
+    "value1": 0
+  },
+  "Weight": "105",
+  "PercentageHigherForce_Forefoot_Left": {
+    "value": 58.297189739143384,
+    "sdValue": 7.3847975973319535,
+    "value1": 0
+  },
+  "ContactTime_Right_Rear": {
+    "value": 9.302963610867268,
+    "sdValue": 1.7930681980211167,
+    "value1": 0
+  },
+  "AvgPercentLateral_Left": {
+    "value": 48.37932484274661,
+    "sdValue": 5.15621186038735,
+    "value1": 0
+  },
+  "AvgLeftRightAreaSI": {
+    "value": -0.11794350398266312,
+    "sdValue": 2.5292872048516943,
+    "value1": 0
+  },
+  "PercentageHigherForce_Forefoot_Right": {
+    "value": 59.200771255538854,
+    "sdValue": 6.788124928329975,
+    "value1": 0
+  },
+  "Ethnicity": "White",
+  "Gender": "Female",
+  "PercentageHigherForce_Rearfoot_Right": {
+    "value": 40.79922874446114,
+    "sdValue": 6.788124928329974,
+    "value1": 0
+  },
+  "AvgPercentLateral_Right": {
+    "value": 49.04521551088417,
+    "sdValue": 4.801402214414491,
+    "value1": 0
+  },
+  "ContactTime_Right_Fore": {
+    "value": 27.339231010681985,
+    "sdValue": 5.995410227876075,
+    "value1": 0
+  },
+  "TimeChangeRearToFore_Percent_Left": {
+    "value": 62.95995966064822,
+    "sdValue": 6.7154734802352465,
+    "value1": 0
+  },
+  "ContactTime_Right_Full": {
+    "value": 63.35780537845074,
+    "sdValue": 6.587209985268647,
+    "value1": 0
+  },
+  "TimeChangeRearToFore_Percent_Right": {
+    "value": 63.35780537845074,
+    "sdValue": 6.587209985268647,
+    "value1": 0
+  },
+  "TimeChangeRearToFore_Seconds_Left": {
+    "value": 0.3648814786128867,
+    "sdValue": 0.06188547588252548,
+    "value1": 0
+  },
+  "AvgPercentMedial_Right": {
+    "value": 50.95478448911583,
+    "sdValue": 4.801402214414488,
+    "value1": 0
+  },
+  "ContactTime_Left_Rear": {
+    "value": 9.351070030082788,
+    "sdValue": 1.8655030540692064,
+    "value1": 0
+  },
+  "ContactTime_Left_Full": {
+    "value": 62.95995966064822,
+    "sdValue": 6.7154734802352465,
+    "value1": 0
+  },
+  "moduleType": "GaitPressure",
+  "Avg4MaxLeftRightSI": {
+    "value": -0.061691448306225194,
+    "sdValue": 4.19966253878888,
+    "value1": 0
+  },
+  "AvgPercentFore_Left": {
+    "value": 59.88588573405451,
+    "sdValue": 8.108379791046564,
+    "value1": 0
+  },
+  "AvgPercentRight": {
+    "value": 50.292899169575364,
+    "sdValue": 2.347644617691971,
+    "value1": 0
+  },
+  "Height": "10",
+  "AvgContactTime_Time_Left": {
+    "value": 0.5773529406149407,
+    "sdValue": 0.05403616784733188,
+    "value1": 0
+  },
+  "Age": "25",
+  "PercentageHigherForce_Rearfoot_Left": {
+    "value": 41.7028102608566,
+    "sdValue": 7.3847975973319535,
+    "value1": 0
+  },
+  "AvgPercentLeft": {
+    "value": 49.707100830424636,
+    "sdValue": 2.347644617691971,
+    "value1": 0
+  }
+}

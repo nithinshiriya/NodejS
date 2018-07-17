@@ -1,0 +1,28 @@
+{
+  "key": "IndividualFeetDistribution",
+  "type": "SeriesImageSection",
+  "title": "Individual Feet Distribution",
+  "height": 0,
+  "jsonKeys": [
+    "ImageIndividualFeetDistribution"
+  ],
+  "resourceName": "NULL",
+  "resourceKeys": [
+    {
+      "name": "NULL",
+      "items": [
+        {
+          "h5": [
+            {
+              "name": "Individual Feet Distribution",
+              "index" : -1, 
+              "datasetName" : "ImageIndividualFeetDistribution",
+              "recordType": "Gait"
+            }                                  
+          ],
+          "title": "NULL"
+        }
+      ]
+    }
+  ]
+}
